@@ -17,7 +17,7 @@ function ConfirmareEmail() {
     <div className="confirmare-container">
       <h2>Contul tău a fost creat cu succes!</h2>
         <p>Vei primi un email pentru confirmarea contului.</p>
-        <p>Vei fi redirecționat automat la pagina principală în 12 secunde.</p>
+        <p>Vei fi redirecționat automat la pagina principală în câteva secunde.</p>
     </div>
   );
 }

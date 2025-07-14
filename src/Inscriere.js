@@ -135,6 +135,11 @@ function Inscriere() {
       navigate('/sub12');
       return;
     }
+    
+    if (formData.varsta === '12-18') {
+      navigate('/acord-parental', { state: formData });
+      return;
+    }    
 
     if (Object.keys(allErrors).length === 0) {
       navigate('/confirmare-email');
@@ -201,7 +206,7 @@ function Inscriere() {
           disabled={!!errors.manager || !formData.manager}
         >
           <option value="">Vârstă</option>
-          <option value="18+">18 & peste</option>
+          <option value="18+">18 &gte;</option>
           <option value="12-18">12-18 (acord parental)</option>
           <option value="sub12">&lt; 12</option>
         </select>

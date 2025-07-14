@@ -1,0 +1,163 @@
+import React, { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+import './AcordParental.css';
+
+function AcordParental() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const initialData = location.state || {};
+
+  const [parinte, setParinte] = useState('');
+  const [emailParinte, setEmailParinte] = useState('');
+  const [codGenerat, setCodGenerat] = useState('');
+  const [codIntrodus, setCodIntrodus] = useState('');
+  const [confirmat, setConfirmat] = useState(false);
+  const [expiraLa, setExpiraLa] = useState(null);
+  const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
+
+  const validateField = (name, value) => {
+    switch (name) {
+      case 'parinte':
+        if (value.trim().length < 3) return 'Numele părintelui este prea scurt.';
+        break;
+      case 'emailParinte':
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Email invalid.';
+        break;
+      case 'codIntrodus':
+        if (!/^\d{6}$/.test(value)) return 'Codul trebuie să conțină exact 6 cifre.';
+        break;
+      default:
+        return '';
+    }
+    return '';
+  };
+
+  const handleBlur = (name, value) => {
+    setTouched((prev) => ({ ...prev, [name]: true }));
+    setErrors((prev) => ({ ...prev, [name]: validateField(name, value) }));
+  };
+
+  const getFieldClass = (field) => {
+    if (!touched[field]) return '';
+    return errors[field] ? 'invalid' : 'valid';
+  };
+
+  const trimiteEmail = async (cod) => {
+    const templateParams = {
+      parinte: parinte,
+      email_parinte: emailParinte,
+      cod: cod,
+    };
+
+    try {
+      await emailjs.send(
+        "service_cvan0ol",     // <-- Înlocuiește cu Service ID din EmailJS
+        "template_tbzzjg8",    // <-- Înlocuiește cu Template ID
+        templateParams,
+        "uZXLmtQXk-Ew4NkHg"     // <-- Înlocuiește cu Public Key din tab-ul Integration
+      );
+      alert('Emailul a fost trimis către părinte!');
+    } catch (error) {
+      console.error('Eroare trimitere email:', error);
+      alert('A apărut o eroare la trimiterea emailului.');
+    }
+  };
+
+  const genereazaCod = () => {
+    const err1 = validateField('parinte', parinte);
+    const err2 = validateField('emailParinte', emailParinte);
+    if (err1 || err2) {
+      setErrors({ parinte: err1, emailParinte: err2 });
+      setTouched({ parinte: true, emailParinte: true });
+      return;
+    }
+
+    const cod = Math.floor(100000 + Math.random() * 900000).toString();
+    setCodGenerat(cod);
+    setExpiraLa(Date.now() + 60 * 60 * 1000);
+
+    trimiteEmail(cod); // trimite emailul real
+  };
+
+  const verificaCod = () => {
+    const err = validateField('codIntrodus', codIntrodus);
+    if (err) {
+      setErrors({ codIntrodus: err });
+      setTouched({ codIntrodus: true });
+      return;
+    }
+
+    if (Date.now() > expiraLa) {
+      alert('Codul a expirat. Trimite din nou.');
+      return;
+    }
+
+    if (codIntrodus === codGenerat) {
+      setConfirmat(true);
+      setTimeout(() => {
+        navigate('/'); // redirecționare către homepage
+      }, 3000);
+    } else {
+      alert('Cod incorect.');
+    }
+  };
+
+  return (
+    <div className="inscriere-container">
+      <h2>Acord parental</h2>
+
+      {!codGenerat ? (
+        <form className="inscriere-form" onSubmit={(e) => { e.preventDefault(); genereazaCod(); }}>
+          <input
+            type="text"
+            name="parinte"
+            placeholder="Numele părintelui"
+            value={parinte}
+            onChange={(e) => setParinte(e.target.value)}
+            onBlur={(e) => handleBlur('parinte', e.target.value)}
+            className={getFieldClass('parinte')}
+          />
+          {errors.parinte && <span className="error">{errors.parinte}</span>}
+
+          <input
+            type="email"
+            name="emailParinte"
+            placeholder="Emailul părintelui"
+            value={emailParinte}
+            onChange={(e) => setEmailParinte(e.target.value)}
+            onBlur={(e) => handleBlur('emailParinte', e.target.value)}
+            className={getFieldClass('emailParinte')}
+          />
+          {errors.emailParinte && <span className="error">{errors.emailParinte}</span>}
+
+          <button type="submit" className="button green">Trimite codul</button>
+        </form>
+      ) : (
+        <form className="inscriere-form" onSubmit={(e) => { e.preventDefault(); verificaCod(); }}>
+          <input
+            type="text"
+            name="codIntrodus"
+            placeholder="Introduceți codul primit"
+            value={codIntrodus}
+            onChange={(e) => setCodIntrodus(e.target.value)}
+            onBlur={(e) => handleBlur('codIntrodus', e.target.value)}
+            className={getFieldClass('codIntrodus')}
+          />
+          {errors.codIntrodus && <span className="error">{errors.codIntrodus}</span>}
+
+          <button type="submit" className="button green">Confirmă</button>
+
+          {confirmat && (
+            <p style={{ color: '#62A930', fontWeight: 'bold' }}>
+              Cod confirmat. Vei fi redirecționat către pagina principală...
+            </p>
+          )}
+        </form>
+      )}
+    </div>
+  );
+}
+
+export default AcordParental;

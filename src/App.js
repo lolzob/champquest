@@ -6,6 +6,7 @@ import Autentificare from './Autentificare';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import Sub12 from './Sub12';
 import ConfirmareEmail from './ConfirmareEmail';
+import AcordParental from './AcordParental';
 
 function App() {
   const location = useLocation();
@@ -14,7 +15,9 @@ function App() {
     <div className="App">
       {/* HEADER */}
       <header className="app-header">
-        <img src={logo} alt="ChampQuest Logo" className="header-logo" />
+        <Link to="/">
+          <img src={logo} alt="ChampQuest Logo" className="header-logo" />
+        </Link>
       </header>
 
       {/* NAVBAR */}
@@ -32,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/inscriere" element={<Inscriere />} />
         <Route path="/sub12" element={<Sub12 />} />
+        <Route path="/acord-parental" element={<AcordParental />} />
         <Route path="/confirmare-email" element={<ConfirmareEmail />} />
         <Route path="/" element={
           <main className="main-content">
