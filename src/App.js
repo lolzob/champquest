@@ -7,6 +7,7 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import Sub12 from './Sub12';
 import ConfirmareEmail from './ConfirmareEmail';
 import AcordParental from './AcordParental';
+import DespreChampQuest from './DespreChampQuest'; // ✅ Import nou
 
 function App() {
   const location = useLocation();
@@ -27,7 +28,7 @@ function App() {
         ) : (
           <Link to="/inscriere" className="nav-button left">Înscriere</Link>
         )}
-        <button className="nav-button center">Despre ChampQuest</button>
+        <Link to="/despre" className="nav-button center">Despre ChampQuest</Link>
         <button className="nav-button right">Regulament</button>
       </nav>
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/sub12" element={<Sub12 />} />
         <Route path="/acord-parental" element={<AcordParental />} />
         <Route path="/confirmare-email" element={<ConfirmareEmail />} />
+        <Route path="/despre" element={<DespreChampQuest />} /> {/* ✅ Rută nouă */}
         <Route path="/" element={
           <main className="main-content">
             {/* STÂNGA: Imagine + Slogan */}
