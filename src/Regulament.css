@@ -1,0 +1,44 @@
+.regulament-container {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(36, 131, 200, 0.2);
+    font-family: Arial, sans-serif;
+  }
+  
+  .regulament-container h2 {
+    text-align: center;
+    color: #2483C8;
+    margin-bottom: 1.5rem;
+  }
+  
+  .regulament-container h3 {
+    margin-top: 1.5rem;
+    color: #62A930;
+    font-size: 1.2rem;
+  }
+  
+  .regulament-container p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0.5rem 0;
+  }
+  
+  .regulament-container ul {
+    list-style: disc inside;
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+    color: #333;
+  }
+  
+  .regulament-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: #2483C8;
+  }
+  

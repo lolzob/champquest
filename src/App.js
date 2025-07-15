@@ -7,10 +7,16 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import Sub12 from './Sub12';
 import ConfirmareEmail from './ConfirmareEmail';
 import AcordParental from './AcordParental';
-import DespreChampQuest from './DespreChampQuest'; // ✅ Import nou
+import DespreChampQuest from './DespreChampQuest';
+import Regulament from './Regulament';
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const location = useLocation();
+  const { i18n } = useTranslation();
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'ro' ? 'en' : 'ro');
+  };
 
   return (
     <div className="App">
@@ -23,13 +29,21 @@ function App() {
 
       {/* NAVBAR */}
       <nav className="navbar">
-        {location.pathname === '/inscriere' ? (
-          <Link to="/" className="nav-button left">Home</Link>
-        ) : (
-          <Link to="/inscriere" className="nav-button left">Înscriere</Link>
+        <div className="nav-group">
+          {location.pathname === '/inscriere' ? (
+            <Link to="/" className="nav-button left">Home</Link>
+          ) : (
+            <Link to="/inscriere" className="nav-button left">Înscriere</Link>
+          )}
+          <Link to="/despre" className="nav-button center">Despre ChampQuest</Link>
+          <Link to="/regulament" className="nav-button right">Regulament</Link>
+        </div>
+
+        {location.pathname === '/' && (
+          <button onClick={toggleLanguage} className="language-button">
+            {i18n.language === 'ro' ? 'EN' : 'RO'}
+          </button>
         )}
-        <Link to="/despre" className="nav-button center">Despre ChampQuest</Link>
-        <button className="nav-button right">Regulament</button>
       </nav>
 
       {/* ROUTES */}
@@ -38,7 +52,8 @@ function App() {
         <Route path="/sub12" element={<Sub12 />} />
         <Route path="/acord-parental" element={<AcordParental />} />
         <Route path="/confirmare-email" element={<ConfirmareEmail />} />
-        <Route path="/despre" element={<DespreChampQuest />} /> {/* ✅ Rută nouă */}
+        <Route path="/despre" element={<DespreChampQuest />} />
+        <Route path="/regulament" element={<Regulament />} />
         <Route path="/" element={
           <main className="main-content">
             {/* STÂNGA: Imagine + Slogan */}

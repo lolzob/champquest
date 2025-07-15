@@ -23,7 +23,7 @@ function DespreChampQuest() {
         <li>📈 Evoluție autentică a jucătorilor – bazată pe antrenamente și meciuri</li>
         <li>💰 Piață de transfer dinamică – licitezi în timp real pentru viitoarele staruri</li>
         <li>🏟️ Construiește baza clubului – stadion, centru medical, academie</li>
-        <li>🧠 Tactici complexe – 4-4-2, 3-5-2, pressing, marcaj, moral și formă</li>
+        <li>🧠 Tactici complexe – 4-4-2, 3-5-2, 5-4-1, pressing, marcaj, moral și formă</li>
         <li>🌍 Competiții internaționale – alătură-te unei comunități globale</li>
       </ul>
 
