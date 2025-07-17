@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next';
 
 function App() {
   const location = useLocation();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const toggleLanguage = () => {
     i18n.changeLanguage(i18n.language === 'ro' ? 'en' : 'ro');
   };
@@ -30,13 +30,14 @@ function App() {
       {/* NAVBAR */}
       <nav className="navbar">
         <div className="nav-group">
-          {location.pathname === '/inscriere' ? (
-            <Link to="/" className="nav-button left">Home</Link>
+        {location.pathname === '/inscriere' ? (
+          <Link to="/" className="nav-button left">{t('navbar.home')}</Link>
           ) : (
-            <Link to="/inscriere" className="nav-button left">Înscriere</Link>
+          <Link to="/inscriere" className="nav-button left">{t('navbar.inscriere')}</Link>
           )}
-          <Link to="/despre" className="nav-button center">Despre ChampQuest</Link>
-          <Link to="/regulament" className="nav-button right">Regulament</Link>
+          <Link to="/despre" className="nav-button center">{t('navbar.despre')}</Link>
+          <Link to="/regulament" className="nav-button right">{t('navbar.regulament')}</Link>
+
         </div>
 
         {location.pathname === '/' && (
@@ -60,8 +61,9 @@ function App() {
             <div className="left-section">
               <img src={trofeuImg} alt="Trofeu și minge" className="main-image" />
               <p className="slogan">
-                Totul începe cu tine. De la amator la campion. Ia-ți echipa și scrie istorie!
+               {t('home.slogan')}
               </p>
+
             </div>
 
             {/* DREAPTA: Card autentificare */}

@@ -1,6 +1,76 @@
 {
-    "welcome": "Welcome to ChampQuest",
-    "login": "Login",
-    "signup": "Sign Up"
+  "navbar": {
+    "home": "Home",
+    "inscriere": "Sign Up",
+    "despre": "About ChampQuest",
+    "regulament": "Rules",
+    "schimba_limba": "Change language"
+  },
+  "home": {
+    "slogan": "It all starts with you. From amateur to champion. Get your team and write history!",
+    "login_title": "Login",
+    "email": "Email",
+    "parola": "Password",
+    "buton_login": "Log In"
+  },
+  "inscriere": {
+    "titlu": "Get your team!",
+    "email": "Email",
+    "parola": "Password",
+    "nume_manager": "Manager Name",
+    "varsta": "Age",
+    "tara": "Country",
+    "regiunea": "Region",
+    "nume_echipa": "Team Name",
+    "checkbox_text": "I agree to the",
+    "link_termeni": "Terms of Use and Privacy Policy.",
+    "buton_trimite": "Register",
+    "eroare_email": "Invalid email.",
+    "eroare_parola": "Password must be at least 12 characters long and contain lowercase, uppercase letters, numbers, and special characters.",
+    "eroare_manager": "Invalid name. Min 4 characters, only letters, digits, '-', '_'.",
+    "eroare_varsta": "Please select an option.",
+    "eroare_tara": "Please select a country.",
+    "eroare_regiune": "Please select a region.",
+    "eroare_echipa": "Invalid team name. Min 3 characters, only letters and digits.",
+    "eroare_termeni": "You must accept the terms.",
+    "redirect_sub12": "You are too young to create an account.",
+    "redirect_12_18": "Parental approval is required."
+  },
+  "acord": {
+    "titlu": "Parental Consent",
+    "nume_parinte": "Parent's Name",
+    "email_parinte": "Parent's Email",
+    "trimite_cod": "Send Code",
+    "cod_introdus": "Enter the received code",
+    "confirma": "Confirm",
+    "confirmat": "Code confirmed. You will be redirected to the main page ...",
+    "eroare_nume": "Parent name is too short.",
+    "eroare_email": "The email entered is not valid.",
+    "eroare_cod": "The code must contain exactly 6 digits.",
+    "cod_invalid": "Incorrect code.",
+    "cod_expirat": "The code has expired. Please send again.",
+    "email_confirmare": "You will receive an email to confirm the account.",
+    "redirect_home": "You will be redirected in a few seconds..."
+  },
+  "despre": {
+    "titlu": "About ChampQuest",
+    "paragraf1": "ChampQuest is a football management game where you take control of a team and compete for glory.",
+    "paragraf2": "Train your players, plan tactics, make transfers, and lead your team to the top.",
+    "paragraf3": "The game is beginner-friendly but offers depth for experienced managers.",
+    "paragraf4": "Join the community and begin your legendary career!",
+    "invitat": "Join now and write your legend!"
+  },
+  "regulament": {
+    "titlu": "ChampQuest Rules",
+    "reg1": "1. One account per player is allowed.",
+    "reg2": "2. No offensive language or inappropriate content.",
+    "reg3": "3. Match fixing or cheating is not permitted.",
+    "reg4": "4. Respect other players and the game staff.",
+    "reg5": "5. No illegal activity or fraud.",
+    "reg6": "6. Advertising is allowed only with ChampQuest staff approval.",
+    "reg7": "7. The staff has the right to take action for any rule violation.",
+    "reg8": "8. You can report suspicious behavior in the game.",
+    "reg9": "9. Rules may change to improve the game. You’ll be notified of major updates.",
+    "multumire": "💙 Thank you for being part of ChampQuest! Play fair. Enjoy the game. Be a legendary manager!"
   }
-  
+}

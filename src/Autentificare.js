@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Autentificare() {
+  const { t } = useTranslation();
+
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
   const [errors, setErrors] = useState({});
@@ -9,14 +12,14 @@ function Autentificare() {
     e.preventDefault();
     const newErrors = {};
 
-    if (!user.trim()) newErrors.user = 'Completează utilizatorul';
-    if (!pass.trim()) newErrors.pass = 'Completează parola';
+    if (!user.trim()) newErrors.user = t('home.eroare_email');
+    if (!pass.trim()) newErrors.pass = t('home.eroare_parola');
 
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
       alert('Autentificare reușită (simulare)');
-      // aici poți trimite datele spre server
+      // aici va fi integrat backend-ul
     }
   };
 
@@ -24,7 +27,7 @@ function Autentificare() {
     <form className="auth-card" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Utilizator"
+        placeholder={t('home.email')}
         value={user}
         onChange={(e) => setUser(e.target.value)}
       />
@@ -32,13 +35,15 @@ function Autentificare() {
 
       <input
         type="password"
-        placeholder="Parolă"
+        placeholder={t('home.parola')}
         value={pass}
         onChange={(e) => setPass(e.target.value)}
       />
       {errors.pass && <span className="error">{errors.pass}</span>}
 
-      <button type="submit" className="button green">Autentificare</button>
+      <button type="submit" className="button green">
+        {t('home.buton_login')}
+      </button>
     </form>
   );
 }

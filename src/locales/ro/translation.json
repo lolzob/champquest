@@ -1,6 +1,76 @@
 {
-    "welcome": "Bine ai venit la ChampQuest",
-    "login": "Autentificare",
-    "signup": "Înscriere"
+  "navbar": {
+    "home": "Home",
+    "inscriere": "Înscriere",
+    "despre": "Despre ChampQuest",
+    "regulament": "Regulament",
+    "schimba_limba": "Schimbă limba"
+  },
+  "home": {
+    "slogan": "Totul începe cu tine. De la amator la campion. Ia-ți echipa și scrie istorie!",
+    "login_title": "Autentificare",
+    "email": "Email",
+    "parola": "Parolă",
+    "buton_login": "Intră în cont"
+  },
+  "inscriere": {
+    "titlu": "Ia-ți echipa!",
+    "email": "Email",
+    "parola": "Parolă",
+    "nume_manager": "Nume manager",
+    "varsta": "Vârsta",
+    "tara": "Țară",
+    "regiunea": "Regiunea",
+    "nume_echipa": "Nume echipă",
+    "checkbox_text": "I agree to the",
+    "link_termeni": "Terms of Use and Privacy Policy.",
+    "buton_trimite": "Înregistrează-te",
+    "eroare_email": "Email invalid.",
+    "eroare_parola": "Parola trebuie să aibă cel putin 12 caractere si sa contina litere mici, litere mari, cifre si caractere speciale.",
+    "eroare_manager": "Nume invalid. Minim 4 caractere, doar litere, cifre, '-', '_'.",
+    "eroare_varsta": "Selectează o opțiune.",
+    "eroare_tara": "Selectează o țară.",
+    "eroare_regiune": "Selectează o regiune.",
+    "eroare_echipa": "Nume echipă invalid. Minim 3 caractere, doar litere și cifre.",
+    "eroare_termeni": "Trebuie să accepți termenii.",
+    "redirect_sub12": "Ești prea mic pentru a crea un cont.",
+    "redirect_12_18": "Este necesar acordul parental."
+  },
+  "acord": {
+    "titlu": "Acord parental",
+    "nume_parinte": "Numele părintelui",
+    "email_parinte": "Emailul părintelui",
+    "trimite_cod": "Trimite codul",
+    "cod_introdus": "Introduceți codul primit",
+    "confirma": "Confirmă",
+    "confirmat": "Cod confirmat. Vei fi redirecționat către pagina principală ...",
+    "eroare_nume": "Numele părintelui este prea scurt.",
+    "eroare_email": "Emailul introdus nu este valid.",
+    "eroare_cod": "Codul trebuie să conțină exact 6 cifre.",
+    "cod_invalid": "Cod incorect.",
+    "cod_expirat": "Codul a expirat. Trimite din nou.",
+    "email_confirmare": "Vei primi un email pentru confirmarea contului.",
+    "redirect_home": "Vei fi redirecționat în câteva secunde..."
+  },
+  "despre": {
+    "titlu": "Despre ChampQuest",
+    "paragraf1": "ChampQuest este un joc de management fotbalistic în care preiei controlul unei echipe și concurezi pentru glorie.",
+    "paragraf2": "Antrenează-ți jucătorii, planifică strategii, fă transferuri și du-ți echipa către titlul suprem.",
+    "paragraf3": "Jocul este prietenos cu începătorii, dar oferă și profunzime pentru managerii experimentați.",
+    "paragraf4": "Alătură-te comunității și începe-ți cariera de legendă!",
+    "invitat": "Intră acum în joc și scrie-ți legenda!"
+  },
+  "regulament": {
+    "titlu": "Regulament ChampQuest",
+    "reg1": "1. Cont unic – Fiecare jucător are voie la un singur cont.",
+    "reg2": "2. Fără înjurături sau conținut ofensator.",
+    "reg3": "3. Fără manipulări – Nu e permisă aranjarea de meciuri.",
+    "reg4": "4. Respectă ceilalți jucători și staff-ul jocului.",
+    "reg5": "5. Nicio activitate ilegală – interzis orice comportament fraudulos.",
+    "reg6": "6. Reclama este permisă doar cu acordul echipei ChampQuest.",
+    "reg7": "7. Staff-ul are dreptul de a sancționa orice abatere.",
+    "reg8": "8. Poți raporta comportamente suspecte din joc.",
+    "reg9": "9. Regulamentul poate fi modificat – vei fi anunțat.",
+    "multumire": "💙 Îți mulțumim că faci parte din ChampQuest! Joacă cinstit. Bucură-te de joc. Fii un manager de legendă!"
   }
-  
+}
