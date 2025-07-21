@@ -55,10 +55,10 @@ function AcordParental() {
 
     try {
       await emailjs.send(
-        "service_cvan0ol",      // ← Înlocuiește cu Service ID real
-        "template_tbzzjg8",     // ← Înlocuiește cu Template ID real
-        "W936WkjB-BU84KbM8",    // ← Înlocuiește cu Public Key real
-        templateParams
+        "service_cvan0ol",     // Service ID
+        "template_tbzzjg8",    // Template ID
+        templateParams,        // PARAMETRI
+        "W936WkjB-BU84KbM8"     // Public Key
       );
       alert(t('acord.email_confirmare'));
     } catch (error) {
