@@ -1,82 +1,78 @@
 import React from 'react';
 import './Regulament.css';
+import { useTranslation } from 'react-i18next';
 
 function Regulament() {
+  const { t } = useTranslation();
+
   return (
     <div className="regulament-container">
-      <h2>🛡️ Regulamentul Jocului ChampQuest</h2>
+      <h2>🛡️ {t('regulament.titlu')}</h2>
 
       <section>
-        <h3>1. 🧠 Ce este ChampQuest?</h3>
-        <p>
-          ChampQuest este un joc online de strategie sportivă unde devii managerul propriei echipe de fotbal.
-          Îți construiești clubul de la zero și concurezi cu alți jucători pentru glorie!
-        </p>
+        <h3>{t('regulament.sec1_titlu')}</h3>
+        <p>{t('regulament.sec1_text')}</p>
       </section>
 
       <section>
-        <h3>2. 👤 Contul tău</h3>
+        <h3>{t('regulament.sec2_titlu')}</h3>
         <ul>
-          <li>Poți avea <strong>un singur cont</strong>.</li>
-          <li>Nu este permis să creezi conturi multiple pentru avantaje neloiale.</li>
-          <li>Dacă ai sub 18 ani, ai nevoie de acordul părinților.</li>
+          <li>{t('regulament.sec2_p1')}</li>
+          <li>{t('regulament.sec2_p2')}</li>
+          <li>{t('regulament.sec2_p3')}</li>
         </ul>
       </section>
 
       <section>
-        <h3>3. ⚽ Joc corect</h3>
+        <h3>{t('regulament.sec3_titlu')}</h3>
         <ul>
-          <li>Joacă cinstit. Nu folosi trucuri sau programe automate.</li>
-          <li>Este interzisă manipularea pieței de transferuri între conturi.</li>
+          <li>{t('regulament.sec3_p1')}</li>
+          <li>{t('regulament.sec3_p2')}</li>
         </ul>
       </section>
 
       <section>
-        <h3>4. 🗣️ Respectă comunitatea</h3>
+        <h3>{t('regulament.sec4_titlu')}</h3>
         <ul>
-          <li>Fii politicos. Limbajul vulgar, ofensator sau rasist este interzis.</li>
-          <li>Promovează fair-play-ul și respectul față de ceilalți utilizatori.</li>
+          <li>{t('regulament.sec4_p1')}</li>
+          <li>{t('regulament.sec4_p2')}</li>
         </ul>
       </section>
 
       <section>
-        <h3>5. 💼 Transferuri și economie</h3>
+        <h3>{t('regulament.sec5_titlu')}</h3>
         <ul>
-          <li>Transferurile trebuie să reflecte valoarea reală a jucătorilor.</li>
-          <li>Tranzacțiile suspecte vor fi verificate de echipa de joc.</li>
+          <li>{t('regulament.sec5_p1')}</li>
+          <li>{t('regulament.sec5_p2')}</li>
         </ul>
       </section>
 
       <section>
-        <h3>6. 🏆 Competiții</h3>
+        <h3>{t('regulament.sec6_titlu')}</h3>
         <ul>
-          <li>Participă la campionate, cupe și meciuri amicale în condiții egale.</li>
-          <li>Nu există „plată pentru câștig”. Totul ține de strategie și răbdare.</li>
+          <li>{t('regulament.sec6_p1')}</li>
+          <li>{t('regulament.sec6_p2')}</li>
         </ul>
       </section>
 
       <section>
-        <h3>7. ⚠️ Încălcarea regulilor</h3>
-        <p>
-          Încălcările pot duce la avertisment, suspendare sau ștergerea contului. Vrem un joc corect pentru toată lumea!
-        </p>
+        <h3>{t('regulament.sec7_titlu')}</h3>
+        <p>{t('regulament.sec7_text')}</p>
       </section>
 
       <section>
-        <h3>8. 🧑‍⚖️ Adminii jocului</h3>
-        <p>Administratorii sunt responsabili cu menținerea regulilor și pot lua decizii finale în cazuri de abateri.</p>
+        <h3>{t('regulament.sec8_titlu')}</h3>
+        <p>{t('regulament.sec8_text')}</p>
       </section>
 
       <section>
-        <h3>9. 🔁 Schimbări de regulament</h3>
-        <p>
-          Regulamentul poate fi modificat oricând pentru a îmbunătăți jocul. Vei fi anunțat la fiecare actualizare importantă.
-        </p>
+        <h3>{t('regulament.sec9_titlu')}</h3>
+        <p>{t('regulament.sec9_text')}</p>
       </section>
 
       <div className="regulament-footer">
-        <strong>💙 Îți mulțumim că faci parte din ChampQuest!</strong><br />
-        Joacă cinstit. Bucură-te de joc. Fii un manager de legendă!
+        <strong>💙 {t('regulament.multumire1')}</strong><br />
+        {t('regulament.multumire2')}
       </div>
     </div>
   );

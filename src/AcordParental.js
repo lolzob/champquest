@@ -18,6 +18,8 @@ function AcordParental() {
   const [expiraLa, setExpiraLa] = useState(null);
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
+  const [mesajConfirmare, setMesajConfirmare] = useState(false);
+  const [afiseazaCampCod, setAfiseazaCampCod] = useState(false);
 
   const validateField = (name, value) => {
     switch (name) {
@@ -55,12 +57,11 @@ function AcordParental() {
 
     try {
       await emailjs.send(
-        "service_cvan0ol",     // Service ID
-        "template_tbzzjg8",    // Template ID
-        templateParams,        // PARAMETRI
-        "W936WkjB-BU84KbM8"     // Public Key
+        "service_y0kzxc3",
+        "template_tbzzjg8",
+        templateParams,
+        "W936WkjB-BU84KbM8"
       );
-      alert(t('acord.email_confirmare'));
     } catch (error) {
       console.error('Eroare trimitere email:', error);
       alert('A apărut o eroare la trimiterea emailului.');
@@ -77,10 +78,15 @@ function AcordParental() {
     }
 
     const cod = Math.floor(100000 + Math.random() * 900000).toString();
-    setCodGenerat(cod);
-    setExpiraLa(Date.now() + 60 * 60 * 1000);
+    setMesajConfirmare(true);
 
     trimiteEmail(cod);
+
+    setTimeout(() => {
+      setCodGenerat(cod);
+      setExpiraLa(Date.now() + 60 * 60 * 1000);
+      setAfiseazaCampCod(true);
+    }, 6000);
   };
 
   const verificaCod = () => {
@@ -110,34 +116,42 @@ function AcordParental() {
     <div className="inscriere-container">
       <h2>{t('acord.titlu')}</h2>
 
-      {!codGenerat ? (
-        <form className="inscriere-form" onSubmit={(e) => { e.preventDefault(); genereazaCod(); }}>
-          <input
-            type="text"
-            name="parinte"
-            placeholder={t('acord.nume_parinte')}
-            value={parinte}
-            onChange={(e) => setParinte(e.target.value)}
-            onBlur={(e) => handleBlur('parinte', e.target.value)}
-            className={getFieldClass('parinte')}
-          />
-          {errors.parinte && <span className="error">{errors.parinte}</span>}
+      {!afiseazaCampCod ? (
+        <>
+          <form className="inscriere-form" onSubmit={(e) => { e.preventDefault(); genereazaCod(); }}>
+            <input
+              type="text"
+              name="parinte"
+              placeholder={t('acord.nume_parinte')}
+              value={parinte}
+              onChange={(e) => setParinte(e.target.value)}
+              onBlur={(e) => handleBlur('parinte', e.target.value)}
+              className={getFieldClass('parinte')}
+            />
+            {errors.parinte && <span className="error">{errors.parinte}</span>}
 
-          <input
-            type="email"
-            name="emailParinte"
-            placeholder={t('acord.email_parinte')}
-            value={emailParinte}
-            onChange={(e) => setEmailParinte(e.target.value)}
-            onBlur={(e) => handleBlur('emailParinte', e.target.value)}
-            className={getFieldClass('emailParinte')}
-          />
-          {errors.emailParinte && <span className="error">{errors.emailParinte}</span>}
+            <input
+              type="email"
+              name="emailParinte"
+              placeholder={t('acord.email_parinte')}
+              value={emailParinte}
+              onChange={(e) => setEmailParinte(e.target.value)}
+              onBlur={(e) => handleBlur('emailParinte', e.target.value)}
+              className={getFieldClass('emailParinte')}
+            />
+            {errors.emailParinte && <span className="error">{errors.emailParinte}</span>}
 
-          <button type="submit" className="button green">
-            {t('acord.trimite_cod')}
-          </button>
-        </form>
+            <button type="submit" className="button green">
+              {t('acord.trimite_cod')}
+            </button>
+          </form>
+
+          {mesajConfirmare && (
+            <p style={{ marginTop: '1rem', color: '#2483C8', fontStyle: 'italic' }}>
+              {t('acord.email_confirmare')}
+            </p>
+          )}
+        </>
       ) : (
         <form className="inscriere-form" onSubmit={(e) => { e.preventDefault(); verificaCod(); }}>
           <input
