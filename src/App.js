@@ -9,11 +9,14 @@ import ConfirmareEmail from './ConfirmareEmail';
 import AcordParental from './AcordParental';
 import DespreChampQuest from './DespreChampQuest';
 import Regulament from './Regulament';
+import EchipaMea from './EchipaMea';
+import PrivateRoute from './PrivateRoute';
 import { useTranslation } from 'react-i18next';
 
 function App() {
   const location = useLocation();
   const { t, i18n } = useTranslation();
+
   const toggleLanguage = () => {
     i18n.changeLanguage(i18n.language === 'ro' ? 'en' : 'ro');
   };
@@ -28,24 +31,25 @@ function App() {
       </header>
 
       {/* NAVBAR */}
-      <nav className="navbar">
-        <div className="nav-group">
-        {location.pathname === '/inscriere' ? (
-          <Link to="/" className="nav-button left">{t('navbar.home')}</Link>
-          ) : (
-          <Link to="/inscriere" className="nav-button left">{t('navbar.inscriere')}</Link>
+      {location.pathname !== '/echipa' && (
+        <nav className="navbar">
+          <div className="nav-group">
+            {location.pathname === '/inscriere' ? (
+              <Link to="/" className="nav-button left">{t('navbar.home')}</Link>
+            ) : (
+              <Link to="/inscriere" className="nav-button left">{t('navbar.inscriere')}</Link>
+            )}
+            <Link to="/despre" className="nav-button center">{t('navbar.despre')}</Link>
+            <Link to="/regulament" className="nav-button right">{t('navbar.regulament')}</Link>
+          </div>
+
+          {location.pathname === '/' && (
+            <button onClick={toggleLanguage} className="language-button">
+              {i18n.language === 'ro' ? 'EN' : 'RO'}
+            </button>
           )}
-          <Link to="/despre" className="nav-button center">{t('navbar.despre')}</Link>
-          <Link to="/regulament" className="nav-button right">{t('navbar.regulament')}</Link>
-
-        </div>
-
-        {location.pathname === '/' && (
-          <button onClick={toggleLanguage} className="language-button">
-            {i18n.language === 'ro' ? 'EN' : 'RO'}
-          </button>
-        )}
-      </nav>
+        </nav>
+      )}
 
       {/* ROUTES */}
       <Routes>
@@ -55,23 +59,29 @@ function App() {
         <Route path="/confirmare-email" element={<ConfirmareEmail />} />
         <Route path="/despre" element={<DespreChampQuest />} />
         <Route path="/regulament" element={<Regulament />} />
-        <Route path="/" element={
-          <main className="main-content">
-            {/* STÂNGA: Imagine + Slogan */}
-            <div className="left-section">
-              <img src={trofeuImg} alt="Trofeu și minge" className="main-image" />
-              <p className="slogan">
-               {t('home.slogan')}
-              </p>
+        <Route
+          path="/echipa"
+          element={
+            <PrivateRoute>
+              <EchipaMea />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <main className="main-content">
+              <div className="left-section">
+                <img src={trofeuImg} alt="Trofeu și minge" className="main-image" />
+                <p className="slogan">{t('home.slogan')}</p>
+              </div>
 
-            </div>
-
-            {/* DREAPTA: Card autentificare */}
-            <div className="right-section">
-              <Autentificare />
-            </div>
-          </main>
-        } />
+              <div className="right-section">
+                <Autentificare />
+              </div>
+            </main>
+          }
+        />
       </Routes>
 
       {/* FOOTER */}

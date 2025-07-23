@@ -1,0 +1,137 @@
+/* === Resetare stil === */
+.pagina-echipa {
+  background-color: #f4f9ff;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: #2483C8;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 2rem;
+  height: 50px;
+}
+
+/* === Grupări de butoane === */
+.nav-left,
+.nav-center,
+.nav-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* === Stil butoane normale === */
+.nav-button {
+  background-color: #62A930;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.0rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+/* === Buton activ === */
+.nav-button.activ {
+  background-color: #2483C8;
+  border: 2px solid white;
+}
+
+/* === Buton Deconectare === */
+.deconectare-button {
+  background-color: red;
+  color: white;
+}
+
+.deconectare-button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.deconectare-button:active {
+  background-color: #62A930;
+  color: white;
+}
+
+/* === Buton Admin === */
+.admin-button {
+  background-color: #8E24AA;
+  color: white;
+}
+
+.admin-button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.admin-button:active {
+  background-color: #62A930;
+  color: white;
+}
+
+/* === Conținut pagină === */
+.continut-echipa {
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+}
+
+/* === Card stânga === */
+.card-stanga {
+  flex: 3;
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Card dreapta === */
+.card-dreapta {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Titluri secțiuni/card === */
+.titlu-echipa,
+.titlu-sectiune {
+  background-color: #2483C8;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Liste === */
+.sectiune {
+  margin-bottom: 30px;
+}
+
+.card-stanga ul,
+.card-dreapta ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card-stanga li,
+.card-dreapta li {
+  padding: 6px 0;
+  font-size: 17px;
+}

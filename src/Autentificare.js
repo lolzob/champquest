@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 function Autentificare() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
@@ -12,14 +14,29 @@ function Autentificare() {
     e.preventDefault();
     const newErrors = {};
 
-    if (!user.trim()) newErrors.user = t('home.eroare_email');
-    if (!pass.trim()) newErrors.pass = t('home.eroare_parola');
+    if (!user.trim()) newErrors.user = t('home.eroare_email') || 'Email lipsă';
+    if (!pass.trim()) newErrors.pass = t('home.eroare_parola') || 'Parolă lipsă';
 
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
+      // ✅ Simulare de autentificare reușită
       alert('Autentificare reușită (simulare)');
-      // aici va fi integrat backend-ul
+
+      // ✅ Salvăm starea în localStorage
+      localStorage.setItem('user', user);
+
+      const echipa = {
+        nume: "Rapid Junior",
+        tara: "România",
+        regiune: "Brașov",
+        buget: 1250000,
+        divizie: "Divizia B"
+      };
+      localStorage.setItem('echipa', JSON.stringify(echipa));
+
+      // ✅ Redirecționare către pagina echipei
+      navigate('/echipa');
     }
   };
 

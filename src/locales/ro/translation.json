@@ -98,5 +98,31 @@
     "sec9_text": "Regulamentul poate fi modificat oricând pentru a îmbunătăți jocul. Vei fi anunțat la fiecare actualizare importantă.",
     "multumire1": "Îți mulțumim că faci parte din ChampQuest!",
     "multumire2": "Joacă cinstit. Bucură-te de joc. Fii un manager de legendă!"
+  },
+    "echipa": {
+    "global": "Global",
+    "forum": "Forum",
+    "ajutor": "Ajutor",
+    "deconectare": "Deconectare",
+    "admin": "Admin",
+    "echipaMea": "Echipa mea",
+
+    "echipaMare": "Echipa Mare",
+    "seria": "Seria",
+    "cupa": "Cupa",
+    "meciuri": "Meciuri",
+    "amicale": "Amicale",
+    "jucatori": "Jucători",
+    "antrenament": "Antrenament",
+    "listaTransfer": "Lista de transfer",
+
+    "echipaMica": "Echipa Mică",
+    "cautatoriTalente": "Căutători de talente",
+
+    "infoEchipa": "Info echipă",
+    "birou": "Birou",
+    "finante": "Finanțe",
+    "staff": "Staff",
+    "stadion": "Stadion"
   }
 }
