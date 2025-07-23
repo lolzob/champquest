@@ -2,9 +2,17 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 
 const PrivateRoute = ({ children }) => {
-  const isLoggedIn = localStorage.getItem('user'); // sau orice folosești ca să verifici loginul
+  try {
+    const rawUser = localStorage.getItem('user');
+    const user = JSON.parse(rawUser);
+    if (user && user.email) {
+      return children;
+    }
+  } catch (e) {
+    // optional: log error
+  }
 
-  return isLoggedIn ? children : <Navigate to="/" />;
+  return <Navigate to="/" replace />;
 };
 
 export default PrivateRoute;

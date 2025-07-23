@@ -37,9 +37,15 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-button:hover {
+/* === Hover comun === */
+.nav-button:hover,
+.deconectare-button:hover,
+.admin-button:hover {
   background-color: yellow;
   color: black;
 }
@@ -47,23 +53,14 @@
 /* === Buton activ === */
 .nav-button.activ {
   background-color: #2483C8;
-  border: 2px solid white;
+  border: 3px solid #62A930;
 }
 
-/* === Buton Deconectare === */
-.deconectare-button {
-  background-color: red;
-  color: white;
-}
-
-.deconectare-button:hover {
+/* === Hover pentru butonul activ (Echipa Mea) === */
+.nav-button.activ:hover {
   background-color: yellow;
   color: black;
-}
-
-.deconectare-button:active {
-  background-color: #62A930;
-  color: white;
+  border: 2px solid white;
 }
 
 /* === Buton Admin === */
@@ -72,12 +69,22 @@
   color: white;
 }
 
-.admin-button:hover {
-  background-color: yellow;
-  color: black;
+.admin-button:active {
+  background-color: #62A930;
+  color: white;
 }
 
-.admin-button:active {
+/* === Buton Deconectare (icon Power) === */
+.deconectare-button {
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.deconectare-button:active {
   background-color: #62A930;
   color: white;
 }
@@ -89,18 +96,18 @@
   gap: 30px;
 }
 
-/* === Card stânga === */
+/* === Card stânga (mai mare) === */
 .card-stanga {
-  flex: 3;
+  flex: 4;
   background-color: white;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* === Card dreapta === */
+/* === Card dreapta (mai mic) === */
 .card-dreapta {
-  flex: 1;
+  flex: 0.8;
   background-color: white;
   padding: 20px;
   border-radius: 16px;
@@ -108,20 +115,30 @@
 }
 
 /* === Titluri secțiuni/card === */
-.titlu-echipa,
-.titlu-sectiune {
+.titlu-echipa {
   background-color: #2483C8;
   color: white;
   padding: 8px 14px;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titlu-sectiune {
+  background-color: #62A930;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 15px;
   margin-bottom: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* === Liste === */
 .sectiune {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .card-stanga ul,
@@ -130,8 +147,18 @@
   padding-left: 0;
 }
 
-.card-stanga li,
+.card-stanga li {
+  padding: 3px 0;
+}
+
 .card-dreapta li {
-  padding: 6px 0;
-  font-size: 17px;
+  padding: 3px 12px 0px 12px;
+}
+
+.card-dreapta .sectiune ul li {
+  font-size: 14px;
+}
+
+.card-dreapta .sectiune:last-child {
+  margin-bottom: 0;
 }

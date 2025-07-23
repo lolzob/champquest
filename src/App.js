@@ -10,12 +10,23 @@ import AcordParental from './AcordParental';
 import DespreChampQuest from './DespreChampQuest';
 import Regulament from './Regulament';
 import EchipaMea from './EchipaMea';
-import PrivateRoute from './PrivateRoute';
+// PrivateRoute este încă importat dar nefolosit acum
 import { useTranslation } from 'react-i18next';
+import CeasSiData from './components/CeasSiData';
 
 function App() {
   const location = useLocation();
   const { t, i18n } = useTranslation();
+
+  const isUserLoggedIn = () => {
+    try {
+      const rawUser = localStorage.getItem('user');
+      const user = JSON.parse(rawUser);
+      return user && user.email;
+    } catch {
+      return false;
+    }
+  };
 
   const toggleLanguage = () => {
     i18n.changeLanguage(i18n.language === 'ro' ? 'en' : 'ro');
@@ -23,14 +34,14 @@ function App() {
 
   return (
     <div className="App">
-      {/* HEADER */}
+      {/* === HEADER === */}
       <header className="app-header">
-        <Link to="/">
+        <Link to={isUserLoggedIn() ? "/echipa" : "/"}>
           <img src={logo} alt="ChampQuest Logo" className="header-logo" />
         </Link>
       </header>
 
-      {/* NAVBAR */}
+      {/* === NAVBAR === */}
       {location.pathname !== '/echipa' && (
         <nav className="navbar">
           <div className="nav-group">
@@ -43,6 +54,9 @@ function App() {
             <Link to="/regulament" className="nav-button right">{t('navbar.regulament')}</Link>
           </div>
 
+          {/* 🔹 Ceas în dreapta sus */}
+          <CeasSiData />
+
           {location.pathname === '/' && (
             <button onClick={toggleLanguage} className="language-button">
               {i18n.language === 'ro' ? 'EN' : 'RO'}
@@ -51,40 +65,32 @@ function App() {
         </nav>
       )}
 
-      {/* ROUTES */}
+      {/* === ROUTES === */}
       <Routes>
+        <Route path="/" element={
+          <main className="main-content">
+            <div className="left-section">
+              <img src={trofeuImg} alt="Trofeu și minge" className="main-image" />
+              <p className="slogan">{t('home.slogan')}</p>
+            </div>
+            <div className="right-section">
+              <Autentificare />
+            </div>
+          </main>
+        } />
+
         <Route path="/inscriere" element={<Inscriere />} />
         <Route path="/sub12" element={<Sub12 />} />
         <Route path="/acord-parental" element={<AcordParental />} />
         <Route path="/confirmare-email" element={<ConfirmareEmail />} />
         <Route path="/despre" element={<DespreChampQuest />} />
         <Route path="/regulament" element={<Regulament />} />
-        <Route
-          path="/echipa"
-          element={
-            <PrivateRoute>
-              <EchipaMea />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/"
-          element={
-            <main className="main-content">
-              <div className="left-section">
-                <img src={trofeuImg} alt="Trofeu și minge" className="main-image" />
-                <p className="slogan">{t('home.slogan')}</p>
-              </div>
 
-              <div className="right-section">
-                <Autentificare />
-              </div>
-            </main>
-          }
-        />
+        {/* ✅ Pagina echipei accesibilă liber (fără PrivateRoute) */}
+        <Route path="/echipa" element={<EchipaMea />} />
       </Routes>
 
-      {/* FOOTER */}
+      {/* === FOOTER === */}
       <footer className="app-footer">
         <div className="social-icons">
           {/* Adaugă icoane aici */}
