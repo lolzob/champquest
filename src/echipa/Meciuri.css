@@ -1,0 +1,47 @@
+.pagina-meciuri {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.pagina-meciuri h2 {
+  color: #2483C8;
+  margin-bottom: 1rem;
+}
+
+.pagina-meciuri p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.lista-meciuri ul {
+  list-style: none;
+  padding-left: 0;
+  border-top: 1px solid #ccc;
+}
+
+.lista-meciuri li {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+  transition: background-color 0.2s ease;
+}
+
+.lista-meciuri li:hover {
+  background-color: #eef6ff;
+}
+
+.lista-meciuri strong {
+  color: #2483C8;
+}
+
+.lista-meciuri span {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.lista-meciuri em {
+  color: #666;
+  font-style: normal;
+}

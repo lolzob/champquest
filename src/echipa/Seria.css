@@ -1,0 +1,44 @@
+.pagina-seria {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.pagina-seria h2 {
+  color: #2483C8;
+  margin-bottom: 1rem;
+}
+
+.pagina-seria p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tabel-clasament table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tabel-clasament th,
+.tabel-clasament td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.tabel-clasament th {
+  background-color: #2483C8;
+  color: white;
+  font-weight: bold;
+}
+
+.tabel-clasament tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tabel-clasament tr:hover {
+  background-color: #e0f0ff;
+}

@@ -10,7 +10,6 @@ import AcordParental from './AcordParental';
 import DespreChampQuest from './DespreChampQuest';
 import Regulament from './Regulament';
 import EchipaMea from './EchipaMea';
-// PrivateRoute este încă importat dar nefolosit acum
 import { useTranslation } from 'react-i18next';
 import CeasSiData from './components/CeasSiData';
 
@@ -42,7 +41,7 @@ function App() {
       </header>
 
       {/* === NAVBAR === */}
-      {location.pathname !== '/echipa' && (
+      {!location.pathname.startsWith('/echipa') && (
         <nav className="navbar">
           <div className="nav-group">
             {location.pathname === '/inscriere' ? (
@@ -67,18 +66,20 @@ function App() {
 
       {/* === ROUTES === */}
       <Routes>
-        <Route path="/" element={
-          <main className="main-content">
-            <div className="left-section">
-              <img src={trofeuImg} alt="Trofeu și minge" className="main-image" />
-              <p className="slogan">{t('home.slogan')}</p>
-            </div>
-            <div className="right-section">
-              <Autentificare />
-            </div>
-          </main>
-        } />
-
+        <Route
+          path="/"
+          element={
+            <main className="main-content">
+              <div className="left-section">
+                <img src={trofeuImg} alt="Trofeu și minge" className="main-image" />
+                <p className="slogan">{t('home.slogan')}</p>
+              </div>
+              <div className="right-section">
+                <Autentificare />
+              </div>
+            </main>
+          }
+        />
         <Route path="/inscriere" element={<Inscriere />} />
         <Route path="/sub12" element={<Sub12 />} />
         <Route path="/acord-parental" element={<AcordParental />} />
@@ -86,8 +87,8 @@ function App() {
         <Route path="/despre" element={<DespreChampQuest />} />
         <Route path="/regulament" element={<Regulament />} />
 
-        {/* ✅ Pagina echipei accesibilă liber (fără PrivateRoute) */}
-        <Route path="/echipa" element={<EchipaMea />} />
+        {/* ✅ Aici am modificat pentru a permite subrutele din EchipaMea */}
+        <Route path="/echipa/*" element={<EchipaMea />} />
       </Routes>
 
       {/* === FOOTER === */}

@@ -1,0 +1,39 @@
+.pagina-cupa {
+  padding: 2rem;
+  background-color: #f8f8f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.pagina-cupa h2 {
+  color: #2483C8;
+  margin-bottom: 1rem;
+}
+
+.pagina-cupa p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tabel-cupa table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabel-cupa th,
+.tabel-cupa td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.tabel-cupa th {
+  background-color: #2483C8;
+  color: white;
+}
+
+.tabel-cupa tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
