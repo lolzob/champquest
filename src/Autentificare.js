@@ -1,3 +1,4 @@
+// === Autentificare.js ===
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -23,15 +24,20 @@ function Autentificare() {
       // ✅ Simulare de autentificare reușită
       alert('Autentificare reușită (simulare)');
 
-      // ✅ Salvăm starea în localStorage
-      localStorage.setItem('user', user);
+      // ✅ Salvăm starea utilizatorului în localStorage cu rol admin pentru "lolzob"
+      const userObject = {
+        email: user,
+        admin: user.trim().toLowerCase() === 'lolzob'
+      };
+      localStorage.setItem('user', JSON.stringify(userObject));
 
+      // ✅ Salvăm echipa utilizatorului (simulat)
       const echipa = {
-        nume: "Rapid Junior",
+        nume: "Răzeșii",
         tara: "România",
-        regiune: "Brașov",
+        regiune: "Iași",
         buget: 1250000,
-        divizie: "Divizia B"
+        divizie: "Divizia C"
       };
       localStorage.setItem('echipa', JSON.stringify(echipa));
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import './BirouMeu.css';
+import './BiroulMeu.css';
 
-const BirouMeu = ({ echipa }) => {
+const BiroulMeu = ({ echipa }) => {
   return (
     <div className="birou-meu">
       <h2>Biroul meu</h2>
@@ -31,4 +31,4 @@ const BirouMeu = ({ echipa }) => {
   );
 };
 
-export default BirouMeu;
+export default BiroulMeu;

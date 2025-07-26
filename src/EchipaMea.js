@@ -1,4 +1,5 @@
-import React from 'react';
+// === EchipaMea.js ===
+import React, { useState, useEffect } from 'react';
 import './EchipaMea.css';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +8,7 @@ import CeasSiData from './components/CeasSiData';
 
 // Pagini din birou
 import InfoEchipa from './birou/InfoEchipa';
-import BirouMeu from './birou/BirouMeu';
+import BiroulMeu from './birou/BiroulMeu';
 import Staff from './birou/Staff';
 import Stadion from './birou/Stadion';
 import Finante from './birou/Finante';
@@ -28,6 +29,9 @@ import AmicaleAcademie from './academia/AmicaleAcademie';
 import JucatoriAcademie from './academia/JucatoriAcademie';
 import AntrenamentAcademie from './academia/AntrenamentAcademie';
 import CautatoriTalente from './academia/CautatoriTalente';
+
+// Pagina admin
+import AdminPanel from './AdminPanel';
 
 const EchipaMea = () => {
   const navigate = useNavigate();
@@ -61,16 +65,61 @@ const EchipaMea = () => {
     navigate('/');
   };
 
+  const currentPath = location.pathname;
+  const navItem = (path, labelKey) => (
+    <li onClick={() => navigate(path)} className={currentPath === path ? 'activ' : ''}>
+      {t(labelKey)}
+    </li>
+  );
+
+  // === PROGRAM SAPTAMANAL ===
+  const zile = ['Luni', 'Marți', 'Miercuri', 'Joi', 'Vineri', 'Sâmbătă', 'Duminică'];
+  const [ziSelectata, setZiSelectata] = useState('');
+  const [saptamanaCurenta, setSaptamanaCurenta] = useState([]);
+
+  const programZilnic = Object.fromEntries(zile.map(zi => [zi, t(`program_zilnic.${zi}`)]));
+
+  useEffect(() => {
+    const azi = new Date();
+    const ziAzi = azi.getDay();
+    const offset = ziAzi === 0 ? -6 : 1 - ziAzi;
+    const luni = new Date(azi);
+    luni.setDate(azi.getDate() + offset);
+
+    const saptamanaNoua = zile.map((zi, idx) => {
+      const d = new Date(luni);
+      d.setDate(d.getDate() + idx);
+      const ziua = d.getDate().toString().padStart(2, '0');
+      const luna = (d.getMonth() + 1).toString().padStart(2, '0');
+      const an = d.getFullYear();
+      return {
+        zi,
+        data: `${ziua}.${luna}.${an}`,
+        activ: azi.toDateString() === d.toDateString(),
+      };
+    });
+    setSaptamanaCurenta(saptamanaNoua);
+    const aziZi = saptamanaNoua.find((z) => z.activ);
+    if (aziZi) setZiSelectata(aziZi.zi);
+  }, [t]);
+
+  // === ANUNTURI SPECIALE (acum e gol) ===
+  const anunturiSpeciale = [];
+
   return (
     <div className="pagina-echipa">
-      {/* === NAVBAR === */}
       <nav className="navbar">
         <div className="nav-left">
           <button className="nav-button">{t('echipa.global')}</button>
           <button className="nav-button">{t('echipa.forum')}</button>
           <button className="nav-button">{t('echipa.ajutor')}</button>
           {user.admin && (
-            <button className="nav-button admin-button">Admin</button>
+            <button
+              className="nav-button admin-button"
+              onClick={() => navigate('/echipa/admin')}
+              >
+                Admin
+            </button>
           )}
         </div>
 
@@ -92,13 +141,11 @@ const EchipaMea = () => {
         </div>
       </nav>
 
-      {/* === CONȚINUT === */}
       <div className="continut-echipa">
-        {/* === CARD STÂNGA === */}
         <div className="card-stanga">
           <Routes>
             <Route path="/info" element={<InfoEchipa echipa={echipa} />} />
-            <Route path="/birou" element={<BirouMeu />} />
+            <Route path="/birou" element={<BiroulMeu echipa={echipa} />} />
             <Route path="/staff" element={<Staff />} />
             <Route path="/stadion" element={<Stadion />} />
             <Route path="/finante" element={<Finante />} />
@@ -115,48 +162,79 @@ const EchipaMea = () => {
             <Route path="/jucatori-academie" element={<JucatoriAcademie />} />
             <Route path="/antrenament-academie" element={<AntrenamentAcademie />} />
             <Route path="/cautatori-talente" element={<CautatoriTalente />} />
-            <Route path="*" element={<h2 className="titlu-sectiune">{t('echipa.noutati')}</h2>} />
+            <Route path="/admin" element={<AdminPanel />} />
+            <Route
+              path="*"
+              element={
+                <>
+                  <h2 className="titlu-sectiune">{t('echipa.noutati')}</h2>
+                  <div className="zile-container">
+                    {saptamanaCurenta.map(({ zi, data }) => (
+                      <div
+                        key={zi}
+                        className={`zi-patrat ${ziSelectata === zi ? 'activ' : ''}`}
+                        onClick={() => setZiSelectata(zi)}
+                      >
+                        <div className="zi-titlu">{zi}</div>
+                        <div className="zi-data">{data}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="program-zi">
+                    <p>{programZilnic[ziSelectata]}</p>
+                  </div>
+
+                  {/* === Anunțuri speciale doar dacă există === */}
+                  {anunturiSpeciale.length > 0 && (
+                    <div className="card-anunturi">
+                      <h3>Anunțuri speciale</h3>
+                      <ul>
+                        {anunturiSpeciale.map((anunt, idx) => (
+                          <li key={idx}>{anunt}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </>
+              }
+            />
           </Routes>
         </div>
 
-        {/* === CARD DREAPTA === */}
         <div className="card-dreapta">
-          {/* Nume și informații echipă */}
           <div className="sectiune">
             <h2 className="titlu-echipa">{echipa.nume}</h2>
             <ul>
-              <li onClick={() => navigate('/echipa/info')}>{t('echipa.infoEchipa')}</li>
-              <li onClick={() => navigate('/echipa/birou')}>{t('echipa.biroul')}</li>
-              <li onClick={() => navigate('/echipa/staff')}>{t('echipa.staff')}</li>
-              <li onClick={() => navigate('/echipa/stadion')}>{t('echipa.stadion')}</li>
-              <li onClick={() => navigate('/echipa/finante')}>{t('echipa.finante')}</li>
+              {navItem('/echipa/info', 'echipa.infoEchipa')}
+              {navItem('/echipa/birou', 'echipa.biroul')}
+              {navItem('/echipa/staff', 'echipa.staff')}
+              {navItem('/echipa/stadion', 'echipa.stadion')}
+              {navItem('/echipa/finante', 'echipa.finante')}
             </ul>
           </div>
 
-          {/* Echipa mare */}
           <div className="sectiune">
             <h2 className="titlu-sectiune">{t('echipa.echipaMare')}</h2>
             <ul>
-              <li onClick={() => navigate('/echipa/seria')}>{t('echipa.seria')}</li>
-              <li onClick={() => navigate('/echipa/meciuri')}>{t('echipa.meciuri')}</li>
-              <li onClick={() => navigate('/echipa/cupa')}>{t('echipa.cupa')}</li>
-              <li onClick={() => navigate('/echipa/amicale')}>{t('echipa.amicale')}</li>
-              <li onClick={() => navigate('/echipa/jucatori')}>{t('echipa.jucatori')}</li>
-              <li onClick={() => navigate('/echipa/antrenament')}>{t('echipa.antrenament')}</li>
-              <li onClick={() => navigate('/echipa/lista-transfer')}>{t('echipa.listaTransfer')}</li>
+              {navItem('/echipa/seria', 'echipa.seria')}
+              {navItem('/echipa/meciuri', 'echipa.meciuri')}
+              {navItem('/echipa/cupa', 'echipa.cupa')}
+              {navItem('/echipa/amicale', 'echipa.amicale')}
+              {navItem('/echipa/jucatori', 'echipa.jucatori')}
+              {navItem('/echipa/antrenament', 'echipa.antrenament')}
+              {navItem('/echipa/lista-transfer', 'echipa.listaTransfer')}
             </ul>
           </div>
 
-          {/* Echipa mică */}
           <div className="sectiune">
             <h2 className="titlu-sectiune">{t('echipa.echipaMica')}</h2>
             <ul>
-              <li onClick={() => navigate('/echipa/seria-academie')}>{t('echipa.seria')}</li>
-              <li onClick={() => navigate('/echipa/meciuri-academie')}>{t('echipa.meciuri')}</li>
-              <li onClick={() => navigate('/echipa/amicale-academie')}>{t('echipa.amicale')}</li>
-              <li onClick={() => navigate('/echipa/jucatori-academie')}>{t('echipa.jucatori')}</li>
-              <li onClick={() => navigate('/echipa/antrenament-academie')}>{t('echipa.antrenament')}</li>
-              <li onClick={() => navigate('/echipa/cautatori-talente')}>{t('echipa.cautatoriTalente')}</li>
+              {navItem('/echipa/seria-academie', 'echipa.seria')}
+              {navItem('/echipa/meciuri-academie', 'echipa.meciuri')}
+              {navItem('/echipa/amicale-academie', 'echipa.amicale')}
+              {navItem('/echipa/jucatori-academie', 'echipa.jucatori')}
+              {navItem('/echipa/antrenament-academie', 'echipa.antrenament')}
+              {navItem('/echipa/cautatori-talente', 'echipa.cautatoriTalente')}
             </ul>
           </div>
         </div>

@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #EBEEEA;
 }
 
 *, *::before, *::after {
@@ -101,7 +101,7 @@ body {
 /* === STÂNGA: Imagine și slogan === */
 .left-section {
   flex: 3;
-  background-color: #DCE2DC; 
+  background-color: #EBEEEA; 
   color: #2483C8;
   display: flex;
   flex-direction: center;
@@ -134,7 +134,7 @@ body {
 /* === DREAPTA: Formular de autentificare === */
 .right-section {
   flex: 1;
-  background-color:#DCE2DC ;
+  background-color:#EBEEEA ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,7 +142,7 @@ body {
 }
 
 .auth-card {
-  background-color: #DCE2DC;
+  background-color: #EBEEEA;
   border: none;
   border-radius: 0;
   padding: 1rem 0;

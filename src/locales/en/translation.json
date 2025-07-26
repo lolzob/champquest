@@ -124,5 +124,49 @@
     "finante": "Finances",
     "staff": "Staff",
     "stadion": "Stadium"
+  },
+  "echipa": {
+    "global": "Global",
+    "forum": "Forum",
+    "ajutor": "Help",
+    "echipaMea": "My Team",
+    "noutati": "News",
+    "infoEchipa": "Team Info",
+    "biroul": "My Office",
+    "staff": "Staff",
+    "stadion": "Stadium",
+    "finante": "Finances",
+    "echipaMare": "Main Team",
+    "seria": "League",
+    "meciuri": "Matches",
+    "cupa": "Cup",
+    "amicale": "Friendlies",
+    "jucatori": "Players",
+    "antrenament": "Training",
+    "listaTransfer": "Transfer List",
+    "echipaMica": "Youth Team",
+    "cautatoriTalente": "Talent Scouts",
+    "nume": "Team Name",
+    "tara": "Country",
+    "regiune": "Region",
+    "divizie": "Division",
+    "buget": "Budget",
+    "deconectare": "Logout"
+  },
+  "program_zilnic": {
+  "Luni": "Club financial update and players' physical recovery.",
+  "Marți": "Physical-tactical training and form update.",
+  "Miercuri": "National Cup match or friendly match.",
+  "Joi": "Physical-tactical training and form update.",
+  "Vineri": "Youth training and matches from International Club Cups.",
+  "Sâmbătă": "Youth match and league (championship) match.",
+  "Duminică": "Youth scouting and recruitment, plus national teams matches."
+ },
+ "anunturi_speciale": {
+    "titlu": "Special Announcements",
+    "candidaturi": "The application period for National Team (ABS and U21) is now open.",
+    "alegeri": "Elections for national team manager are now active in your country.",
+    "vot_cupa": "Vote for the host country of the upcoming World Cup.",
+    "admin": "Official notice: the site will be unavailable on {{data}} from {{ora_start}} to {{ora_end}}."
   }
 }

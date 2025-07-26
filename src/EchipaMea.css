@@ -1,6 +1,6 @@
 /* === Resetare stil === */
 .pagina-echipa {
-  background-color: #f4f9ff;
+  background-color: #EBEEEA;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -56,7 +56,6 @@
   border: 3px solid #62A930;
 }
 
-/* === Hover pentru butonul activ (Echipa Mea) === */
 .nav-button.activ:hover {
   background-color: yellow;
   color: black;
@@ -74,7 +73,7 @@
   color: white;
 }
 
-/* === Buton Deconectare (icon Power) === */
+/* === Buton Deconectare === */
 .deconectare-button {
   background-color: red;
   color: white;
@@ -96,7 +95,7 @@
   gap: 30px;
 }
 
-/* === Card stânga (mai mare) === */
+/* === Card stânga === */
 .card-stanga {
   flex: 4;
   background-color: white;
@@ -105,7 +104,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* === Card dreapta (mai mic) === */
+/* === Card dreapta === */
 .card-dreapta {
   flex: 0.8;
   background-color: white;
@@ -114,7 +113,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* === Titluri secțiuni/card === */
+/* === Titluri secțiuni === */
 .titlu-echipa {
   background-color: #2483C8;
   color: white;
@@ -134,6 +133,7 @@
   font-size: 15px;
   margin-bottom: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 /* === Liste === */
@@ -152,13 +152,120 @@
 }
 
 .card-dreapta li {
-  padding: 3px 12px 0px 12px;
-}
-
-.card-dreapta .sectiune ul li {
+  padding: 0px 12px 2px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
   font-size: 14px;
 }
 
+.card-dreapta li:hover {
+  background-color: #FFFACD;
+  color: #000;
+}
+
+.card-dreapta li.activ {
+  background-color: #DFF5E1;
+  font-weight: bold;
+  border-left: 2px solid #A5C9E5;
+  color: #2483C8;
+  padding-left: 10px;
+  transition: all 0.3s ease;
+}
+
 .card-dreapta .sectiune:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0px;
+}
+
+/* === Zile săptămână orizontale === */
+.zile-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 4px;
+  margin: 30px 0 21px 0;
+}
+
+.zi-patrat {
+  flex: 1 1 0;
+  max-width: 13%;
+  min-width: 60px;
+  background-color: #DFF5E1;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 21px 4px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.zi-patrat:hover {
+  background-color: #FFFACD;
+  color: black;
+  border-color: #2483C8;
+}
+
+.zi-patrat.activ {
+  background-color: #2483C8;
+  color: white;
+  border-color: #62A930;
+  font-weight: bold;
+}
+
+/* === Programul pentru zi === */
+.program-zi {
+  border: 2px solid #2483C8;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #F4F9FF;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* === Anunț important === */
+.anunt-important {
+  margin-top: 10px;
+  border: 2px dashed #FF9800;
+  background-color: #FFF3E0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #444;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+/* === Card Anunțuri Speciale === */
+.card-anunturi {
+  border: 2px dashed #8E24AA;
+  background-color: #FBEFFF;
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 0 8px rgba(142, 36, 170, 0.2);
+  font-size: 14px;
+  color: #4A235A;
+}
+
+.card-anunturi h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #8E24AA;
+  text-align: center;
+}
+
+.card-anunturi ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.card-anunturi li {
+  margin-bottom: 6px;
+  list-style: disc;
 }

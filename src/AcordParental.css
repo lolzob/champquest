@@ -1,11 +1,21 @@
+/* === Container principal pagină === */
+.pagina-acord {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #EBEEEA;
+}
+
+/* === Container formular === */
 .inscriere-container {
-  background-color: #f5f5f5;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* === Formular === */
 .inscriere-form {
   display: flex;
   flex-direction: column;
@@ -28,6 +38,7 @@
   outline: none;
 }
 
+/* === Validări === */
 .inscriere-form input.valid {
   border-color: #62A930 !important;
 }
@@ -44,6 +55,7 @@
   border-color: #FF0000 !important;
 }
 
+/* === Butoane === */
 .button {
   width: 100%;
   padding: 0.75rem;
@@ -63,6 +75,7 @@
   background-color: #2483C8;
 }
 
+/* === Mesaj eroare === */
 .error {
   color: red;
   font-size: 0.85rem;

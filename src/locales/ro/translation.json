@@ -124,5 +124,49 @@
     "finante": "Finanțe",
     "staff": "Staff",
     "stadion": "Stadion"
-  }
+  },
+  "echipa": {
+    "global": "Global",
+    "forum": "Forum",
+    "ajutor": "Ajutor",
+    "echipaMea": "Echipa mea",
+    "noutati": "Noutăți",
+    "infoEchipa": "Info echipă",
+    "biroul": "Biroul meu",
+    "staff": "Staff",
+    "stadion": "Stadion",
+    "finante": "Finanțe",
+    "echipaMare": "Echipa Mare",
+    "seria": "Seria",
+    "meciuri": "Meciuri",
+    "cupa": "Cupa",
+    "amicale": "Amicale",
+    "jucatori": "Jucători",
+    "antrenament": "Antrenament",
+    "listaTransfer": "Listă transfer",
+    "echipaMica": "Echipa Mică",
+    "cautatoriTalente": "Căutători talente",
+    "nume": "Nume echipă",
+    "tara": "Țară",
+    "regiune": "Regiune",
+    "divizie": "Divizie",
+    "buget": "Buget",
+    "deconectare": "Deconectare"
+  },
+  "program_zilnic": {
+  "Luni": "Actualizare economică a clubului și recuperare fizică a jucătorilor.",
+  "Marți": "Antrenament fizico - tactic și actualizare formă.",
+  "Miercuri": "Meci de Cupă Națională sau meci amical.",
+  "Joi": "Antrenament fizico - tactic și actualizare formă.",
+  "Vineri": "Antrenamentul juniorilor și meciuri din Cupele Internaționale ale cluburilor.",
+  "Sâmbătă": "Meci juniori și meci campionat (ligă).",
+  "Duminică": "Selecție și recrutare de juniori, plus meciuri ale echipelor naționale."
+ },
+ "anunturi_speciale": {
+    "titlu": "Anunțuri speciale",
+    "candidaturi": "S-a deschis perioada pentru depunerea candidaturilor la Națională (ABS și U21).",
+    "alegeri": "Alegerile pentru selecționerul naționalei sunt active în țara ta.",
+    "vot_cupa": "Votează țara care va găzdui următoarea Cupă Mondială.",
+    "admin": "Anunț oficial: site-ul va fi indisponibil în data de {{data}} între orele {{ora_start}} - {{ora_end}}."
+  } 
 }

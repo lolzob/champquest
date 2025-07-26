@@ -84,7 +84,7 @@ function AcordParental() {
 
     setTimeout(() => {
       setCodGenerat(cod);
-      setExpiraLa(Date.now() + 60 * 60 * 1000);
+      setExpiraLa(Date.now() + 60 * 60 * 1000); // 1 oră
       setAfiseazaCampCod(true);
     }, 6000);
   };
@@ -113,69 +113,71 @@ function AcordParental() {
   };
 
   return (
-    <div className="inscriere-container">
-      <h2>{t('acord.titlu')}</h2>
+    <div className="pagina-acord"> {/* adăugăm această clasă pt. controlul întregii pagini */}
+      <div className="inscriere-container">
+        <h2>{t('acord.titlu')}</h2>
 
-      {!afiseazaCampCod ? (
-        <>
-          <form className="inscriere-form" onSubmit={(e) => { e.preventDefault(); genereazaCod(); }}>
+        {!afiseazaCampCod ? (
+          <>
+            <form className="inscriere-form" onSubmit={(e) => { e.preventDefault(); genereazaCod(); }}>
+              <input
+                type="text"
+                name="parinte"
+                placeholder={t('acord.nume_parinte')}
+                value={parinte}
+                onChange={(e) => setParinte(e.target.value)}
+                onBlur={(e) => handleBlur('parinte', e.target.value)}
+                className={getFieldClass('parinte')}
+              />
+              {errors.parinte && <span className="error">{errors.parinte}</span>}
+
+              <input
+                type="email"
+                name="emailParinte"
+                placeholder={t('acord.email_parinte')}
+                value={emailParinte}
+                onChange={(e) => setEmailParinte(e.target.value)}
+                onBlur={(e) => handleBlur('emailParinte', e.target.value)}
+                className={getFieldClass('emailParinte')}
+              />
+              {errors.emailParinte && <span className="error">{errors.emailParinte}</span>}
+
+              <button type="submit" className="button green">
+                {t('acord.trimite_cod')}
+              </button>
+            </form>
+
+            {mesajConfirmare && (
+              <p style={{ marginTop: '1rem', color: '#2483C8', fontStyle: 'italic' }}>
+                {t('acord.email_confirmare')}
+              </p>
+            )}
+          </>
+        ) : (
+          <form className="inscriere-form" onSubmit={(e) => { e.preventDefault(); verificaCod(); }}>
             <input
               type="text"
-              name="parinte"
-              placeholder={t('acord.nume_parinte')}
-              value={parinte}
-              onChange={(e) => setParinte(e.target.value)}
-              onBlur={(e) => handleBlur('parinte', e.target.value)}
-              className={getFieldClass('parinte')}
+              name="codIntrodus"
+              placeholder={t('acord.cod_introdus')}
+              value={codIntrodus}
+              onChange={(e) => setCodIntrodus(e.target.value)}
+              onBlur={(e) => handleBlur('codIntrodus', e.target.value)}
+              className={getFieldClass('codIntrodus')}
             />
-            {errors.parinte && <span className="error">{errors.parinte}</span>}
-
-            <input
-              type="email"
-              name="emailParinte"
-              placeholder={t('acord.email_parinte')}
-              value={emailParinte}
-              onChange={(e) => setEmailParinte(e.target.value)}
-              onBlur={(e) => handleBlur('emailParinte', e.target.value)}
-              className={getFieldClass('emailParinte')}
-            />
-            {errors.emailParinte && <span className="error">{errors.emailParinte}</span>}
+            {errors.codIntrodus && <span className="error">{errors.codIntrodus}</span>}
 
             <button type="submit" className="button green">
-              {t('acord.trimite_cod')}
+              {t('acord.confirma')}
             </button>
+
+            {confirmat && (
+              <p style={{ color: '#62A930', fontWeight: 'bold' }}>
+                {t('acord.confirmat')}
+              </p>
+            )}
           </form>
-
-          {mesajConfirmare && (
-            <p style={{ marginTop: '1rem', color: '#2483C8', fontStyle: 'italic' }}>
-              {t('acord.email_confirmare')}
-            </p>
-          )}
-        </>
-      ) : (
-        <form className="inscriere-form" onSubmit={(e) => { e.preventDefault(); verificaCod(); }}>
-          <input
-            type="text"
-            name="codIntrodus"
-            placeholder={t('acord.cod_introdus')}
-            value={codIntrodus}
-            onChange={(e) => setCodIntrodus(e.target.value)}
-            onBlur={(e) => handleBlur('codIntrodus', e.target.value)}
-            className={getFieldClass('codIntrodus')}
-          />
-          {errors.codIntrodus && <span className="error">{errors.codIntrodus}</span>}
-
-          <button type="submit" className="button green">
-            {t('acord.confirma')}
-          </button>
-
-          {confirmat && (
-            <p style={{ color: '#62A930', fontWeight: 'bold' }}>
-              {t('acord.confirmat')}
-            </p>
-          )}
-        </form>
-      )}
+        )}
+      </div>
     </div>
   );
 }
