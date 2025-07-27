@@ -24,14 +24,25 @@ function Autentificare() {
       // ✅ Simulare de autentificare reușită
       alert('Autentificare reușită (simulare)');
 
-      // ✅ Salvăm starea utilizatorului în localStorage cu rol admin pentru "lolzob"
+      // ✅ Rolul este stabilit în funcție de utilizatorul logat
+      const emailTrim = user.trim().toLowerCase();
+      let rol = '';
+
+      if (emailTrim === 'lolzob') rol = 'cq'; // Admin principal
+      else if (emailTrim === 'traducator') rol = 'tra';
+      else if (emailTrim === 'moderator') rol = 'mod';
+      else if (emailTrim === 'adminsecundar') rol = 'adm';
+      // Altfel, rol gol sau user normal
+
+      // ✅ Salvăm userul în localStorage
       const userObject = {
         email: user,
-        admin: user.trim().toLowerCase() === 'lolzob'
+        admin: emailTrim === 'lolzob',
+        rol: rol
       };
       localStorage.setItem('user', JSON.stringify(userObject));
 
-      // ✅ Salvăm echipa utilizatorului (simulat)
+      // ✅ Salvăm echipa în localStorage
       const echipa = {
         nume: "Răzeșii",
         tara: "România",

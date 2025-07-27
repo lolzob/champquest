@@ -31,7 +31,11 @@ import AntrenamentAcademie from './academia/AntrenamentAcademie';
 import CautatoriTalente from './academia/CautatoriTalente';
 
 // Pagina admin
-import AdminPanel from './AdminPanel';
+import AdminPanel from './admin/AdminPanel';
+import TRA from './admin/TRA';
+import MOD from './admin/MOD';
+import ADM from './admin/ADM';
+import CQ from './admin/CQ';
 
 const EchipaMea = () => {
   const navigate = useNavigate();
@@ -163,6 +167,10 @@ const EchipaMea = () => {
             <Route path="/antrenament-academie" element={<AntrenamentAcademie />} />
             <Route path="/cautatori-talente" element={<CautatoriTalente />} />
             <Route path="/admin" element={<AdminPanel />} />
+            <Route path="/admin/tra" element={<TRA />} />
+            <Route path="/admin/mod" element={<MOD />} />
+            <Route path="/admin/adm" element={<ADM />} />
+            <Route path="/admin/cq" element={<CQ />} />
             <Route
               path="*"
               element={
