@@ -17,18 +17,18 @@ function AdminPanel() {
   return (
     <div className="pagina-admin">
       <h2 className="titlu-admin">Panoul Admin</h2>
-      <div className="container-roluri">
+      <div className="container-roluri-admin">
         {(rol === 'TRA' || rol === 'MOD' || rol === 'ADM' || isCQ) && (
-          <div className="patrat-rol" onClick={() => navigate('/echipa/admin/tra')}>TRA</div>
+          <div className="patrat-rol-admin" onClick={() => navigate('/echipa/admin/tra')}>TRA</div>
         )}
         {(rol === 'MOD' || rol === 'ADM' || isCQ) && (
-          <div className="patrat-rol" onClick={() => navigate('/echipa/admin/mod')}>MOD</div>
+          <div className="patrat-rol-admin" onClick={() => navigate('/echipa/admin/mod')}>MOD</div>
         )}
         {(rol === 'ADM' || isCQ) && (
-          <div className="patrat-rol" onClick={() => navigate('/echipa/admin/adm')}>ADM</div>
+          <div className="patrat-rol-admin" onClick={() => navigate('/echipa/admin/adm')}>ADM</div>
         )}
         {isCQ && (
-          <div className="patrat-rol" onClick={() => navigate('/echipa/admin/cq')}>CQ</div>
+          <div className="patrat-rol-admin" onClick={() => navigate('/echipa/admin/cq')}>CQ</div>
         )}
       </div>
     </div>

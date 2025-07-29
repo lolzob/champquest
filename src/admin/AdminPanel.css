@@ -14,11 +14,11 @@
   font-size: 15px;
   margin-bottom: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;;
+  text-align: center;
 }
 
 /* === Container pătrate roluri (orizontal) === */
-.container-roluri {
+.container-roluri-admin {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -28,15 +28,15 @@
   box-sizing: border-box;
 }
 
-/* === Stil pătrat rol (identic cu .zi-patrat) === */
-.patrat-rol {
+/* === Stil pătrat rol (similar cu .zi-patrat dar izolat) === */
+.patrat-rol-admin {
   flex: 1 1 0;
   max-width: 13%;
   min-width: 60px;
   background-color: #DFF5E1;
   border: 2px solid transparent;
   border-radius: 6px;
-  padding: 21px 4px;
+  padding: 27px 4px;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
@@ -45,7 +45,7 @@
   cursor: default;
 }
 
-.patrat-rol:hover {
+.patrat-rol-admin:hover {
   background-color: #FFFACD;
   color: black;
   border-color: #2483C8;
