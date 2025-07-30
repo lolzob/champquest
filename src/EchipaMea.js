@@ -33,6 +33,7 @@ import CautatoriTalente from './academia/CautatoriTalente';
 // Pagina admin
 import AdminPanel from './admin/AdminPanel';
 import TRA from './admin/TRA';
+import TraMesaj from './admin/TraMesaj';
 import MOD from './admin/MOD';
 import ADM from './admin/ADM';
 import CQ from './admin/CQ';
@@ -168,6 +169,7 @@ const EchipaMea = () => {
             <Route path="/cautatori-talente" element={<CautatoriTalente />} />
             <Route path="/admin" element={<AdminPanel />} />
             <Route path="/admin/tra" element={<TRA />} />
+            <Route path="/admin/tramesaj" element={<TraMesaj />} />
             <Route path="/admin/mod" element={<MOD />} />
             <Route path="/admin/adm" element={<ADM />} />
             <Route path="/admin/cq" element={<CQ />} />

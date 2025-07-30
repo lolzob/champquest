@@ -64,7 +64,7 @@
 
 /* === Titlu din pătrate (ex: Română, Engleză) === */
 .titlu-patrat-tra {
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 6px;
   font-weight: normal;
   color: #555;
@@ -106,7 +106,7 @@
 }
 
 .buton-salveaza-tra:hover {
-  background-color: yellow;
+  background-color: #2483C8;
   color: black;
 }
 

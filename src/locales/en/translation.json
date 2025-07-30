@@ -168,5 +168,25 @@
     "alegeri": "Elections for national team manager are now active in your country.",
     "vot_cupa": "Vote for the host country of the upcoming World Cup.",
     "admin": "Official notice: the site will be unavailable on {{data}} from {{ora_start}} to {{ora_end}}."
-  }
+  },
+  "admin": {
+  "titlu": "Admin Panel",
+  "tra": "TRA",
+  "mod": "MOD",
+  "adm": "ADM",
+  "cq": "CQ"
+},
+  "tra": {
+  "panou": "TRA Panel",
+  "mesaje_verificare": "Messages under review",
+  "mesaje_asteptare": "Pending messages",
+  "mesaj_utilizator": "Message from user",
+  "raspuns_utilizator": "Reply to user",
+  "mesaj_catre_adm": "Message to ADM",
+  "trimite": "Send",
+  "trimite_si_inchide": "Send and close",
+  "placeholder_raspuns": "Write your reply here...",
+  "placeholder_adm": "Write your message to ADM here...",
+  "niciun_mesaj": "No message selected."
+}
 }

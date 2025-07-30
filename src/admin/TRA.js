@@ -6,7 +6,7 @@ import './TRA.css';
 
 function TRA() {
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [cheie, setCheie] = useState('');
   const [tradusa, setTradusa] = useState('');
   const [jsonGenerat, setJsonGenerat] = useState(null);
@@ -26,6 +26,7 @@ function TRA() {
 
   const limbaTinta = user.lang || 'xx';
 
+  // Exemple RO și EN
   const ro = { auth: { login: 'Autentificare' }, menu: { home: 'Acasă' } };
   const en = { auth: { login: 'Login' }, menu: { home: 'Home' } };
 
@@ -38,7 +39,7 @@ function TRA() {
   const handleSave = () => {
     const keys = cheie.split('.');
     if (keys.length !== 2) {
-      alert('Folosește cheia în formatul „meniu.cheie” ex: menu.home');
+      alert(t('tra.alert_cheie'));
       return;
     }
 
@@ -66,14 +67,22 @@ function TRA() {
 
   return (
     <>
-      <h2 className="titlu-tra">Secțiunea Traducători ({limbaTinta.toUpperCase()})</h2>
+      <h2 className="titlu-tra">
+        {t('tra.sectiune')} ({limbaTinta.toUpperCase()})
+      </h2>
 
       <div className="container-patrate-tra">
-        <div className="patrat-rol-tra mesaj-verificare mic-tra">
-          Mesaje în verificare: <span className="verde">2</span>
+        <div
+          className="patrat-rol-tra mesaj-verificare mic-tra"
+          onClick={() => navigate('/echipa/admin/tramesaj?tab=verificare')}
+        >
+          {t('tra.mesaje_verificare')}: <span className="verde">2</span>
         </div>
-        <div className="patrat-rol-tra mesaj-asteptare mic-tra">
-          Mesaje în așteptare: <span className="rosu">1</span>
+        <div
+          className="patrat-rol-tra mesaj-asteptare mic-tra"
+          onClick={() => navigate('/echipa/admin/tramesaj?tab=asteptare')}
+        >
+          {t('tra.mesaje_asteptare')}: <span className="rosu">1</span>
         </div>
       </div>
 
@@ -81,35 +90,35 @@ function TRA() {
         type="text"
         value={cheie}
         onChange={(e) => setCheie(e.target.value)}
-        placeholder="Introdu cheia de tradus (ex: menu.home)"
+        placeholder={t('tra.placeholder_cheie')}
         className="camp-input-tra"
       />
 
       <div className="container-patrate-tra">
         <div className="patrat-rol-tra">
-          <div className="titlu-patrat-tra">Română</div>
-          <div>{valoareRo || '(necompletat)'}</div>
+          <div className="titlu-patrat-tra">{t('tra.romana')}</div>
+          <div>{valoareRo || t('tra.necompletat')}</div>
         </div>
         <div className="patrat-rol-tra">
-          <div className="titlu-patrat-tra">Engleză</div>
-          <div>{valoareEn || '(necompletat)'}</div>
+          <div className="titlu-patrat-tra">{t('tra.engleza')}</div>
+          <div>{valoareEn || t('tra.necompletat')}</div>
         </div>
       </div>
 
       <div className="patrat-rol-tra patrat-limba-tinta-tra">
         <div className="titlu-patrat-tra">
-          Traducere în limba: <strong>{limbaTinta.toUpperCase()}</strong>
+          {t('tra.traducere_in')} <strong>{limbaTinta.toUpperCase()}</strong>
         </div>
         <textarea
           value={tradusa}
           onChange={(e) => setTradusa(e.target.value)}
-          placeholder="Scrie traducerea aici..."
+          placeholder={t('tra.placeholder_traducere')}
           className="camp-textarea-tra"
         />
       </div>
 
       <button onClick={handleSave} className="buton-salveaza-tra">
-        Salvează traducerea
+        {t('tra.salveaza')}
       </button>
 
       {jsonGenerat && (

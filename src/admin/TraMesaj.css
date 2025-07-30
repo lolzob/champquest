@@ -1,0 +1,160 @@
+/* === Titlu pagină === */
+.titlu-tramesaj {
+  background-color: #62A930;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 21px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Container orizontal pentru liste === */
+.container-mesaje-tramesaj {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+/* === Listele cu mesaje === */
+.lista-verificare-tramesaj,
+.lista-asteptare-tramesaj {
+  flex: 1;
+  max-height: 240px;
+  overflow-y: auto;
+  padding: 8px;
+  background-color: #DCEEFF;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* === Titlu fix DOAR în liste === */
+.titlu-cart-lista-tramesaj {
+  position: sticky;
+  top: 0;
+  background-color: #DCEEFF;
+  padding: 6px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  z-index: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+/* === Lista mesaje === */
+.lista-verificare-tramesaj ul,
+.lista-asteptare-tramesaj ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-verificare-tramesaj li,
+.lista-asteptare-tramesaj li {
+  padding: 6px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s ease;
+}
+
+.lista-verificare-tramesaj li:hover,
+.lista-asteptare-tramesaj li:hover {
+  background-color: #d0ebff;
+}
+
+/* === Container mesaj utilizator și răspuns === */
+.container-mesaj-utilizator-tramesaj {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+/* === Mesaj utilizator === */
+.mesaj-user-tramesaj {
+  flex: 1;
+  background-color: #DFF5E1;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* === Răspuns utilizator === */
+.raspuns-user-tramesaj {
+  flex: 1;
+  background-color: #DFF5E1;
+  padding: 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* === Titluri pătrate normale (fără sticky/fundal albastru) === */
+.titlu-cart-tramesaj {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* === Textarea === */
+.textarea-tramesaj {
+  width: 100%;
+  height: 90px;
+  resize: none;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/* === Grup butoane răspuns === */
+.butoane-raspuns-tramesaj {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* === Buton general === */
+.buton-tramesaj {
+  padding: 10px 20px;
+  background-color: #62A930;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buton-tramesaj:hover {
+  background-color: #2483C8;
+  color: black;
+}
+
+/* === Mesaj către ADM === */
+.mesaj-catre-adm-tramesaj {
+  margin-top: 18px;
+  background-color: #FEFACD;
+  padding: 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* === Buton ADM centrat === */
+.buton-tramesaj.adm {
+  display: block;
+  margin: 18px auto 0 auto;
+}

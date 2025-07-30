@@ -168,5 +168,25 @@
     "alegeri": "Alegerile pentru selecționerul naționalei sunt active în țara ta.",
     "vot_cupa": "Votează țara care va găzdui următoarea Cupă Mondială.",
     "admin": "Anunț oficial: site-ul va fi indisponibil în data de {{data}} între orele {{ora_start}} - {{ora_end}}."
-  } 
+  },
+  "admin": {
+  "titlu": "Panoul Admin",
+  "tra": "TRA",
+  "mod": "MOD",
+  "adm": "ADM",
+  "cq": "CQ"
+},
+  "tra": {
+  "panou": "Panoul TRA",
+  "mesaje_verificare": "Mesaje în verificare",
+  "mesaje_asteptare": "Mesaje în așteptare",
+  "mesaj_utilizator": "Mesaj de la utilizator",
+  "raspuns_utilizator": "Răspuns către utilizator",
+  "mesaj_catre_adm": "Mesaj către ADM",
+  "trimite": "Trimite",
+  "trimite_si_inchide": "Trimite și închide",
+  "placeholder_raspuns": "Scrie răspunsul aici ...",
+  "placeholder_adm": "Scrie mesajul către ADM aici ...",
+  "niciun_mesaj": "Niciun mesaj selectat."
+}
 }
