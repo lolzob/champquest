@@ -1,4 +1,11 @@
-/* === Titlu pagină MOD === */
+/* === Pagina MOD === */
+.pagina-mod {
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === Titlu Pagina MOD === */
 .titlu-mod {
   background-color: #62A930;
   color: white;
@@ -10,85 +17,83 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* === Container pătrate principale === */
+/* === Container pătrate mesaje === */
 .container-patrate-mod {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 20px;
-  padding: 0 30px;
-  box-sizing: border-box;
+  gap: 6px;
+  margin: 0 0 20px 0;
+  padding: 0; /* eliminat padding lateral */
 }
 
-/* === Pătrat stil TRA (copiat din tra.css) === */
+/* === Pătrat mesaje === */
 .patrat-mod {
-  flex: 1 1 0;
-  max-width: 13%;
-  min-width: 60px;
+  flex: 1;
   background-color: #DCEEFF;
-  border: 2px solid transparent;
   border-radius: 6px;
-  padding: 21px 4px;
+  padding: 18px 4px;
   text-align: center;
   font-size: 13px;
   font-weight: bold;
+  cursor: pointer;
   box-sizing: border-box;
   white-space: nowrap;
-  cursor: pointer;
+  border: 2px solid transparent;
 }
 
 .patrat-mod:hover {
   background-color: #FFFACD;
-  color: black;
   border-color: #2483C8;
 }
 
-/* === Titlu pătrat === */
-.titlu-patrat-mod {
-  margin-bottom: 6px;
-}
-
-/* === Culori numere === */
-.verde {
+/* === Culori numerotare === */
+.verde-mod {
   color: #62A930;
-  font-weight: bold;
+  margin-left: 4px;
 }
 
-.rosu {
+.rosu-mod {
   color: #FF0000;
-  font-weight: bold;
+  margin-left: 4px;
 }
 
-/* === Pătrat forum === */
+/* === Pătrat Forum === */
 .patrat-forum-mod {
   background-color: #FEFACD;
+  padding: 21px;
   border-radius: 6px;
-  padding: 14px;
-  margin: 0 30px;
-  box-sizing: border-box;
+  margin: 0; /* eliminat marginile laterale */
   text-align: center;
 }
 
-/* === Titlu forum === */
-.titlu-forum-mod {
-  font-weight: bold;
+/* === Text Forum === */
+.text-forum-mod {
   font-size: 14px;
-  margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 
-/* === Buton forum === */
+/* === Buton Forum === */
 .buton-forum-mod {
   background-color: #62A930;
   color: white;
-  font-weight: bold;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 18px;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .buton-forum-mod:hover {
   background-color: #2483C8;
   color: black;
+}
+
+/* === Stil pătrat mic === */
+.mic-mod {
+  padding: 12px 8px;
+  font-size: 13px;
+  line-height: 1.2;
 }

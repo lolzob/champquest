@@ -177,7 +177,7 @@
   "cq": "CQ"
 },
   "tra": {
-  "panou": "Panoul TRA",
+  "sectiune": "Panoul TRA",
   "mesaje_verificare": "Mesaje în verificare",
   "mesaje_asteptare": "Mesaje în așteptare",
   "mesaj_utilizator": "Mesaj de la utilizator",
@@ -187,6 +187,28 @@
   "trimite_si_inchide": "Trimite și închide",
   "placeholder_raspuns": "Scrie răspunsul aici ...",
   "placeholder_adm": "Scrie mesajul către ADM aici ...",
-  "niciun_mesaj": "Niciun mesaj selectat."
+  "niciun_mesaj": "Niciun mesaj selectat.",
+  "placeholder_cheie": "Introduceți cheia de tradus ...",
+  "romana": "Română",
+  "engleza": "Engleză",
+  "necompletat": "Necompletat",
+  "traducere_in": "Traducere în {{lang}}",
+  "placeholder_traducere": "Scrie aici traducerea în {{lang}} ...",
+  "salveaza": "Salvează traducerea"
+},
+  "mod": {
+  "panou": "Panoul MOD",
+  "mesaje_verificare": "Mesaje în verificare",
+  "mesaje_asteptare": "Mesaje în așteptare",
+  "mesaj_utilizator": "Mesaj de la utilizator",
+  "raspuns_utilizator": "Răspuns către utilizator",
+  "trimite": "Trimite",
+  "trimite_si_inchide": "Trimite și închide",
+  "mesaj_catre_adm": "Mesaj către ADM",
+  "placeholder_adm": "Scrie aici mesajul către administrator ...",
+  "placeholder_raspuns": "Scrie aici răspunsul către utilizator ...",
+  "niciun_mesaj": "Niciun mesaj selectat.",
+  "catre_forum": "Către forum",
+  "forum": "Deschide forumul"
 }
 }

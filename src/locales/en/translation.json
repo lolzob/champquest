@@ -185,8 +185,30 @@
   "mesaj_catre_adm": "Message to ADM",
   "trimite": "Send",
   "trimite_si_inchide": "Send and close",
-  "placeholder_raspuns": "Write your reply here...",
-  "placeholder_adm": "Write your message to ADM here...",
-  "niciun_mesaj": "No message selected."
+  "placeholder_raspuns": "Write your reply here ...",
+  "placeholder_adm": "Write your message to ADM here ...",
+  "niciun_mesaj": "No message selected.",
+  "placeholder_cheie": "Enter key to translate ...",
+  "romana": "Romanian",
+  "engleza": "English",
+  "necompletat": "Untranslated",
+  "traducere_in": "Translate to {{lang}}",
+  "placeholder_traducere": "Write translation in {{lang}} here ...",
+  "salveaza": "Save translation"
+},
+  "mod": {
+  "panou": "MOD Panel",
+  "mesaje_verificare": "Messages under review",
+  "mesaje_asteptare": "Pending messages",
+  "mesaj_utilizator": "Message from user",
+  "raspuns_utilizator": "Reply to user",
+  "trimite": "Send",
+  "trimite_si_inchide": "Send and close",
+  "mesaj_catre_adm": "Message to ADM",
+  "placeholder_adm": "Write your message to admin here ...",
+  "placeholder_raspuns": "Write your reply to the user here ...",
+  "niciun_mesaj": "No message selected.",
+  "catre_forum": "Go to forum",
+  "forum": "Open forum"
 }
 }

@@ -74,13 +74,13 @@ function TRA() {
       <div className="container-patrate-tra">
         <div
           className="patrat-rol-tra mesaj-verificare mic-tra"
-          onClick={() => navigate('/echipa/admin/tramesaj?tab=verificare')}
+          onClick={() => navigate('/echipa/admin/tramesaj')}
         >
           {t('tra.mesaje_verificare')}: <span className="verde">2</span>
         </div>
         <div
           className="patrat-rol-tra mesaj-asteptare mic-tra"
-          onClick={() => navigate('/echipa/admin/tramesaj?tab=asteptare')}
+          onClick={() => navigate('/echipa/admin/tramesaj')}
         >
           {t('tra.mesaje_asteptare')}: <span className="rosu">1</span>
         </div>
