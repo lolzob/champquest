@@ -15,39 +15,48 @@ function ADM() {
         <div className="rand-patrate-adm">
           <div
             className="patrat-adm mic-adm patrat-verificare"
-            onClick={() => navigate('/echipa/admin/modmesaj')}
+            onClick={() => navigate('/echipa/admin/admmesaj')}
           >
             {t('mod.mesaje_verificare')} <span className="verde-adm">9</span>
           </div>
           <div
             className="patrat-adm mic-adm patrat-asteptare"
-            onClick={() => navigate('/echipa/admin/modmesaj')}
+            onClick={() => navigate('/echipa/admin/admmesaj')}
           >
             {t('mod.mesaje_asteptare')} <span className="rosu-adm">9</span>
           </div>
         </div>
+
         <div className="rand-patrate-adm">
-          <div className="patrat-adm mic-adm patrat-mesaj-tra">
-            Mesaj de la TRA
+          <div
+            className="patrat-adm mic-adm patrat-mesaj-tra"
+            onClick={() => navigate('/echipa/admin/admmesaj')}
+          >
+            {t('adm.mesaj_tra')} <span className="rosu-adm">2</span>
           </div>
-          <div className="patrat-adm mic-adm patrat-mesaj-mod">
-            Mesaj de la MOD
+          <div
+            className="patrat-adm mic-adm patrat-mesaj-mod"
+            onClick={() => navigate('/echipa/admin/admmesaj')}
+          >
+            {t('adm.mesaj_mod')} <span className="rosu-adm">1</span>
           </div>
         </div>
+
         <div className="rand-patrate-adm">
           <div className="patrat-adm mic-adm patrat-lista-transferuri" tabIndex={0}>
-            Lista transferuri
+            {t('adm.lista_transferuri')}
           </div>
           <div className="patrat-adm mic-adm patrat-aprobare-echipa" tabIndex={0}>
-            Aprobare echipa
+            {t('adm.aprobare_echipa')}
           </div>
         </div>
+
         <div className="rand-patrate-adm">
           <div className="patrat-adm mic-adm patrat-avertizare" tabIndex={0}>
-            Avertizare
+            {t('adm.avertizare')}
           </div>
           <div className="patrat-adm mic-adm patrat-amenda" tabIndex={0}>
-            Amenda
+            {t('adm.amenda')}
           </div>
         </div>
       </div>

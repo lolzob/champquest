@@ -1,5 +1,5 @@
 /* === Titlu pagină === */
-.titlu-modmesaj {
+.titlu-admmesaj {
   background-color: #62A930;
   color: white;
   padding: 8px 14px;
@@ -7,11 +7,11 @@
   font-size: 15px;
   margin-bottom: 21px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.13);
 }
 
 /* === Container orizontal pentru liste === */
-.container-mesaje-modmesaj {
+.container-mesaje-admmesaj {
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -19,8 +19,8 @@
 }
 
 /* === Listele cu mesaje === */
-.lista-verificare-modmesaj,
-.lista-asteptare-modmesaj {
+.lista-verificare-admmesaj,
+.lista-asteptare-admmesaj {
   flex: 1;
   max-height: 240px;
   overflow-y: auto;
@@ -33,7 +33,7 @@
 }
 
 /* === Titlu fix DOAR în liste === */
-.titlu-cart-lista-modmesaj {
+.titlu-cart-lista-admmesaj {
   position: sticky;
   top: 0;
   background-color: #DCEEFF;
@@ -46,15 +46,15 @@
 }
 
 /* === Lista mesaje === */
-.lista-verificare-modmesaj ul,
-.lista-asteptare-modmesaj ul {
+.lista-verificare-admmesaj ul,
+.lista-asteptare-admmesaj ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.lista-verificare-modmesaj li,
-.lista-asteptare-modmesaj li {
+.lista-verificare-admmesaj li,
+.lista-asteptare-admmesaj li {
   padding: 6px;
   margin-bottom: 4px;
   border-radius: 4px;
@@ -64,21 +64,22 @@
   transition: background-color 0.2s ease;
 }
 
-.lista-verificare-modmesaj li:hover,
-.lista-asteptare-modmesaj li:hover {
+.lista-verificare-admmesaj li:hover,
+.lista-asteptare-admmesaj li:hover {
   background-color: #d0ebff;
 }
 
 /* === Container mesaj utilizator și răspuns === */
-.container-mesaj-utilizator-modmesaj {
+.container-mesaj-utilizator-admmesaj {
   display: flex;
   justify-content: space-between;
   gap: 12px;
   margin-top: 18px;
 }
 
-/* === Mesaj utilizator === */
-.mesaj-user-modmesaj {
+/* === Mesaj utilizator și răspuns utilizator === */
+.mesaj-user-admmesaj,
+.raspuns-user-admmesaj {
   flex: 1;
   background-color: #DFF5E1;
   padding: 12px;
@@ -87,17 +88,8 @@
   box-sizing: border-box;
 }
 
-/* === Răspuns utilizator === */
-.raspuns-user-modmesaj {
-  flex: 1;
-  background-color: #DFF5E1;
-  padding: 12px;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
 /* === Titluri pătrate normale (fără sticky/fundal albastru) === */
-.titlu-cart-modmesaj {
+.titlu-cart-admmesaj {
   text-align: center;
   font-weight: bold;
   margin-bottom: 8px;
@@ -105,7 +97,7 @@
 }
 
 /* === Textarea === */
-.textarea-modmesaj {
+.textarea-admmesaj {
   width: 100%;
   height: 90px;
   resize: none;
@@ -119,15 +111,72 @@
 }
 
 /* === Grup butoane răspuns === */
-.butoane-raspuns-modmesaj {
+.butoane-raspuns-admmesaj {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 12px;
 }
 
-/* === Buton general === */
-.buton-modmesaj {
+/* === Buton general (vechi) === */
+.buton-admmesaj {
+  padding: 10px 20px;
+  background-color: #2483C8;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buton-admmesaj:hover {
+  background-color: #62A930;
+  color: black;
+}
+
+/* === Mesaj TRA și Răspuns TRA, Mesaj MOD și Răspuns MOD === */
+.container-mesaj-tra-admmesaj,
+.container-mesaj-mod-admmesaj {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.mesaj-tra-admmesaj,
+.raspuns-tra-admmesaj,
+.mesaj-mod-admmesaj,
+.raspuns-mod-admmesaj {
+  flex: 1;
+  background-color: #FFF6E1;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* === Mesaj către CQ === */
+.mesaj-catre-cq-admmesaj {
+  margin-top: 18px;
+  background-color: #FEFACD;
+  padding: 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* === Buton CQ centrat (vechi) === */
+.buton-admmesaj.cq {
+  display: block;
+  margin: 18px auto 0 auto;
+}
+
+/* === Butoane trimite individuale (verde + hover albastru) === */
+.buton-trimite-utilizator,
+.buton-trimite-tra,
+.buton-trimite-mod,
+.buton-trimite-cq {
   padding: 10px 20px;
   background-color: #62A930;
   border: none;
@@ -139,22 +188,16 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.buton-modmesaj:hover {
+.buton-trimite-utilizator:hover,
+.buton-trimite-tra:hover,
+.buton-trimite-mod:hover,
+.buton-trimite-cq:hover {
   background-color: #2483C8;
   color: black;
 }
 
-/* === Mesaj către ADM === */
-.mesaj-catre-adm-modmesaj {
-  margin-top: 18px;
-  background-color: #FEFACD;
-  padding: 12px;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
-/* === Buton ADM centrat === */
-.buton-modmesaj.adm {
+/* === Buton CQ centrat (nou) === */
+.buton-trimite-cq {
   display: block;
   margin: 18px auto 0 auto;
 }

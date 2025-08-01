@@ -210,5 +210,27 @@
   "niciun_mesaj": "No message selected.",
   "catre_forum": "Go to forum",
   "forum": "Open forum"
-}
+},
+  "adm": {
+    "panou": "ADM Panel",
+    "mesaje_verificare": "Messages under review",
+    "mesaje_asteptare": "Pending messages",
+    "mesaj_utilizator": "User message",
+    "raspuns_utilizator": "Reply to user",
+    "mesaj_tra": "Message from TRA",
+    "raspuns_tra": "Reply to TRA",
+    "mesaj_mod": "Message from MOD",
+    "raspuns_mod": "Reply to MOD",
+    "mesaj_catre_cq": "Message to CQ",
+    "trimite": "Send",
+    "placeholder_raspuns": "Write a reply to the user...",
+    "placeholder_raspuns_tra": "Write a reply to TRA...",
+    "placeholder_raspuns_mod": "Write a reply to MOD...",
+    "placeholder_cq": "Write a message to CQ...",
+    "niciun_mesaj": "No message selected",
+    "lista_transferuri": "Transfer list",
+    "aprobare_echipa": "Team approval",
+    "avertizare": "Warning",
+    "amenda": "Fine"
+  }
 }

@@ -210,5 +210,27 @@
   "niciun_mesaj": "Niciun mesaj selectat.",
   "catre_forum": "Către forum",
   "forum": "Deschide forumul"
-}
+}, 
+  "adm": {
+    "panou": "Panoul ADM",
+    "mesaje_verificare": "Mesaje în verificare",
+    "mesaje_asteptare": "Mesaje în așteptare",
+    "mesaj_utilizator": "Mesaj utilizator",
+    "raspuns_utilizator": "Răspuns utilizator",
+    "mesaj_tra": "Mesaj de la TRA",
+    "raspuns_tra": "Răspuns către TRA",
+    "mesaj_mod": "Mesaj de la MOD",
+    "raspuns_mod": "Răspuns către MOD",
+    "mesaj_catre_cq": "Mesaj către CQ",
+    "trimite": "Trimite",
+    "placeholder_raspuns": "Scrie răspuns pentru utilizator...",
+    "placeholder_raspuns_tra": "Scrie răspuns pentru TRA...",
+    "placeholder_raspuns_mod": "Scrie răspuns pentru MOD...",
+    "placeholder_cq": "Scrie mesaj către CQ...",
+    "niciun_mesaj": "Niciun mesaj selectat",
+    "lista_transferuri": "Lista transferuri",
+    "aprobare_echipa": "Aprobare echipă",
+    "avertizare": "Avertizare",
+    "amenda": "Amendă"
+  }
 }

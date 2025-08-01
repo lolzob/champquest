@@ -37,6 +37,7 @@ import TraMesaj from './admin/TraMesaj';
 import MOD from './admin/MOD';
 import ModMesaj from './admin/ModMesaj'; 
 import ADM from './admin/ADM';
+import AdmMesaj from './admin/AdmMesaj';
 import CQ from './admin/CQ';
 
 const EchipaMea = () => {
@@ -174,6 +175,7 @@ const EchipaMea = () => {
             <Route path="/admin/mod" element={<MOD />} />
             <Route path="/admin/modmesaj" element={<ModMesaj />} />
             <Route path="/admin/adm" element={<ADM />} />
+            <Route path="/admin/admmesaj" element={<AdmMesaj />} />
             <Route path="/admin/cq" element={<CQ />} />
             <Route
               path="*"
