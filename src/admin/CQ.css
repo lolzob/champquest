@@ -1,0 +1,92 @@
+/* === Pagina CQ === */
+.cq-pagina {
+  background-color: #fff;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === Titlu CQ === */
+.cq-titlu {
+  background-color: #62A930;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 21px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* === Container general === */
+.cq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* === Grup de 2 pe rând === */
+.cq-rand {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+/* === Rând centru pentru 1 patrat === */
+.cq-rand-centru {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* === Stil pătrat CQ general === */
+.cq-patrat {
+  flex: 1;
+  background-color: #DCEEFF;
+  border-radius: 6px;
+  padding: 18px 4px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  box-sizing: border-box;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  color: black;
+}
+
+.cq-patrat:hover {
+  background-color: #FFFACD;
+  border-color: #4277A9;
+}
+
+/* === Variante mici === */
+.cq-mic {
+  padding: 12px 8px;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+/* === Culori specifice pătrate === */
+.cq-bg-albastru { background-color: #DCEEFF; }
+.cq-bg-verde    { background-color: #DFF5E1; }
+.cq-bg-mov      { background-color: #E5E6FA; }
+.cq-bg-rosu     { background-color: #F6CACA; }
+.cq-bg-crem     { background-color: #FFE4B5; }
+.cq-bg-bej     { background-color: #F3E7D8; }
+.cq-bg-gri      { background-color: #E0E0E0; }
+
+/* === Pentru pătratul centrat === */
+.cq-rand-centru .cq-patrat {
+  max-width: 320px;
+  min-width: 180px;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .cq-rand, .cq-rand-centru {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

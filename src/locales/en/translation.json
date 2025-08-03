@@ -232,5 +232,29 @@
     "aprobare_echipa": "Team approval",
     "avertizare": "Warning",
     "amenda": "Fine"
-  }
+  },
+  "cq": {
+  "panou": "CQ Panel",
+  "mesaj_jucatori": "Message from users",
+  "mesaj_admini": "Message from admins",
+  "lista_transferuri": "Transfer list",
+  "aproba_echipa": "Approve team",
+  "avertizare": "Warning",
+  "amenda": "Fine",
+  "inchidere_admin": "Close admin access",
+  "inchidere_echipa": "Close team",
+  "scoatere_amenda": "Remove fine",
+  "mesaje_utilizatori": "Messages from users",
+  "mesaje_admini": "Messages from admins",
+  "mesaj_utilizator": "User message",
+  "raspuns_utilizator": "Reply to user",
+  "mesaj_catre_admin": "Admin message",
+  "raspuns_admin": "Reply to admin",
+  "mesaj_sistem": "System message",
+  "trimite": "Send",
+  "placeholder_raspuns_user": "Write a reply to the user...",
+  "placeholder_raspuns_admin": "Write a reply to the admin...",
+  "placeholder_sistem": "Write a system message...",
+  "niciun_mesaj": "No message selected"
+}
 }

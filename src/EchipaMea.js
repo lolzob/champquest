@@ -39,6 +39,7 @@ import ModMesaj from './admin/ModMesaj';
 import ADM from './admin/ADM';
 import AdmMesaj from './admin/AdmMesaj';
 import CQ from './admin/CQ';
+import CqMesaj from './admin/CqMesaj';
 
 const EchipaMea = () => {
   const navigate = useNavigate();
@@ -177,6 +178,7 @@ const EchipaMea = () => {
             <Route path="/admin/adm" element={<ADM />} />
             <Route path="/admin/admmesaj" element={<AdmMesaj />} />
             <Route path="/admin/cq" element={<CQ />} />
+            <Route path="/admin/cqmesaj" element={<CqMesaj />} />
             <Route
               path="*"
               element={

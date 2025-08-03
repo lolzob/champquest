@@ -232,5 +232,29 @@
     "aprobare_echipa": "Aprobare echipă",
     "avertizare": "Avertizare",
     "amenda": "Amendă"
-  }
+  },
+  "cq": {
+  "panou": "Panoul CQ",
+  "mesaj_jucatori": "Mesaj de la utilizatori",
+  "mesaj_admini": "Mesaj de la admini",
+  "lista_transferuri": "Lista transferuri",
+  "aproba_echipa": "Aprobă echipă",
+  "avertizare": "Avertizare",
+  "amenda": "Amendă",
+  "inchidere_admin": "Închide acces admin",
+  "inchidere_echipa": "Închide echipă",
+  "scoatere_amenda": "Șterge amendă",
+  "mesaje_utilizatori": "Mesaje de la utilizatori",
+  "mesaje_admini": "Mesaje de la admini",
+  "mesaj_utilizator": "Mesaj utilizator",
+  "raspuns_utilizator": "Răspuns către utilizator",
+  "mesaj_catre_admin": "Mesaj admin",
+  "raspuns_admin": "Răspuns către admin",
+  "mesaj_sistem": "Mesaj pentru sistem",
+  "trimite": "Trimite",
+  "placeholder_raspuns_user": "Scrie răspuns pentru utilizator ...",
+  "placeholder_raspuns_admin": "Scrie răspuns pentru admin ...",
+  "placeholder_sistem": "Scrie mesaj sistem ...",
+  "niciun_mesaj": "Niciun mesaj selectat"
+}
 }
