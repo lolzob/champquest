@@ -256,5 +256,56 @@
   "placeholder_raspuns_admin": "Scrie răspuns pentru admin ...",
   "placeholder_sistem": "Scrie mesaj sistem ...",
   "niciun_mesaj": "Niciun mesaj selectat"
+},
+  "sanctiuni": {
+  "titlu": "Sancțiuni",
+  "confirmare": "Trimite sancțiunea",
+  "idjucator": "ID jucător",
+  "numejucator": "Nume jucător",
+
+  "avertizare": {
+    "title": "Avertisment",
+    "placeholder": "Scrie avertismentul aici...",
+    "mesaj": "Mesaj avertisment",
+    "lista": "Lista avertismentelor",
+    "text1": "Avertisment pentru limbaj ofensator / spam / trolling.",
+    "text2": "Avertisment pentru publicare conținut neadecvat.",
+    "text3": "Avertisment pentru refuz aplicare sancțiune / contestare abuzivă.",
+    "text4": "Avertisment pentru comportament abuziv față de alți useri.",
+    "text5": "Avertisment pentru înțelegeri frauduloase între manageri (match-fixing).",
+    "text6": "Avertisment pentru multi-account / folosire conturi multiple.",
+    "tip1": "Limbaj ofensator / spam / trolling.",
+    "tip2": "Publicare conținut neadecvat.",
+    "tip3": "Refuz aplicare sancțiune / contestare abuzivă.",
+    "tip4": "Comportament abuziv față de alți useri.",
+    "tip5": "Înțelegeri frauduloase între manageri (match-fixing).",
+    "tip6": "Multi-account / folosire conturi multiple."
+  },
+
+  "amenda": {
+    "title": "Amendă",
+    "placeholder": "Scrie amenda aici...",
+    "mesaj": "Mesaj amendă",
+    "lista": "Lista amenzilor",
+    "text1": "Amenda pentru limbaj ofensator / spam / trolling: 3000 cqcoin.",
+    "text2": "Amenda pentru refuz aplicare sancțiune / contestare abuzivă: 4000 cqcoin.",
+    "text3": "Amenda pentru comportament abuziv față de alți useri: 6000 cqcoin.",
+    "text4": "Amenda ințelegeri frauduloase între manageri (match-fixing): 7000 cqcoin.",
+    "text5": "Amenda pentru multi-account / folosire conturi multiple: 10000 cqcoin. Blocare conturi multiple.",
+    "text6": "Amenda pentru tentativă de fraudă / exploatare bug-uri/ hacking: 12000 cqcoin. Blocare permanentă.",
+    "tip1": "Limbaj ofensator / spam / trolling.",
+    "tip2": "Refuz aplicare sancțiune / contestare abuzivă.",
+    "tip3": "Comportament abuziv față de alți useri.",
+    "tip4": "Înțelegeri frauduloase între manageri (match-fixing).",
+    "tip5": "Multi-account / folosire conturi multiple.",
+    "tip6": "Tentativă de fraudă / exploatare bug-uri / hacking."
+  },
+
+  "stergere": {
+    "title": "Ștergere amendă",
+    "placeholder": "Scrie motivul ștergerii...",
+    "mesaj": "Mesaj ștergere",
+    "prefix": "Solicitare ștergere: "
+  }
 }
 }

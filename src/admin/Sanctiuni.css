@@ -1,0 +1,138 @@
+.titlu-sanctiuni {
+  background-color: #62A930;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 21px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.13);
+}
+
+.sanctiuni-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.sanctiuni-card {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  justify-content: flex-start;
+}
+
+.sanctiuni-card-bg-avertizare {
+  background-color: #FFF6E0;
+}
+.sanctiuni-card-bg-amenda {
+  background-color: #DCEEFF;
+}
+.sanctiuni-card-bg-stergere {
+  background-color: #DFF5E1;
+}
+
+.sanctiuni-card-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.sanctiuni-card-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.sanctiuni-input {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  background: #fff;
+}
+.sanctiuni-select {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  background: #fff;
+}
+.sanctiuni-textarea {
+  width: 100%;
+  height: 90px;
+  resize: none;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.sanctiuni-btn-confirm {
+  padding: 10px 20px;
+  background-color: #62A930;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: center;
+}
+.sanctiuni-btn-confirm:hover {
+  background-color: #2483C8;
+  color: black;
+}
+
+.sanctiuni-list-card {
+  margin-bottom: 16px;
+  background-color: #FFF6E0;
+  padding: 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.sanctiuni-list-tipuri-amenda {
+  background-color: #DCEEFF;
+}
+.sanctiuni-list-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.sanctiuni-tipuri-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.sanctiuni-tip-amenda {
+  margin-left: 14px;
+  font-size: 13px;
+  color: #444;
+}
+
+@media (max-width: 900px) {
+  .sanctiuni-row, .sanctiuni-tipuri-grid {
+    flex-direction: column;
+    display: block;
+  }
+  .sanctiuni-row > .sanctiuni-card {
+    margin-bottom: 10px;
+  }
+  .sanctiuni-tipuri-grid {
+    grid-template-columns: 1fr;
+  }
+}
+ 

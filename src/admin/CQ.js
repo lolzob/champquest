@@ -36,8 +36,18 @@ function CQ() {
 
         {/* Rând 3 */}
         <div className="cq-rand">
-          <div className="cq-patrat cq-mic cq-bg-mov">{t('cq.avertizare')}</div>
-          <div className="cq-patrat cq-mic cq-bg-rosu">{t('cq.amenda')}</div>
+          <div 
+            className="cq-patrat cq-mic cq-bg-mov"
+            onClick={() => navigate('/echipa/admin/sanctiuni')}
+            >
+              {t('cq.avertizare')}
+          </div>
+          <div 
+            className="cq-patrat cq-mic cq-bg-rosu"
+            onClick={() => navigate('/echipa/admin/sanctiuni')}
+            >
+              {t('cq.amenda')}
+          </div>
         </div>
 
         {/* Rând 4 */}
@@ -48,7 +58,12 @@ function CQ() {
 
         {/* Rând 5 */}
         <div className="cq-rand-centru">
-          <div className="cq-patrat cq-mic cq-bg-gri">{t('cq.scoatere_amenda')}</div>
+          <div 
+            className="cq-patrat cq-mic cq-bg-gri"
+            onClick={() => navigate('/echipa/admin/sanctiuni')}
+            >
+              {t('cq.scoatere_amenda')}
+          </div>
         </div>
       </div>
     </>
