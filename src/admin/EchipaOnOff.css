@@ -1,0 +1,245 @@
+.echipaonoff-titlu {
+  background-color: #62A930;
+  color: white;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 22px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.13);
+  font-weight: bold;
+}
+
+/* Lista de asteptare */
+.echipaonoff-listaasteptare {
+  background: #DFF5E1;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  padding: 15px 12px 16px 12px;
+  box-sizing: border-box;
+}
+.echipaonoff-listaasteptare-titlu {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #2483C8;
+  text-align: center;
+}
+.echipaonoff-listaasteptare-grid {
+  display: flex;
+  gap: 18px;
+  min-height: 100px;
+}
+.echipaonoff-coloana {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.echipaonoff-echipa-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 3px 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  cursor: pointer;
+  font-size: 14px;
+  transition: border 0.22s;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.echipaonoff-echipa-card-sel {
+  border-color: #62A930;
+}
+.echipaonoff-echipa-nume {
+  font-weight: 600;
+  color: #2483C8;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.echipaonoff-sageata {
+  font-size: 17px;
+  color: #2483C8;
+  margin: 0 2px;
+}
+.echipaonoff-echipa-user {
+  font-size: 12px;
+  color: #444;
+}
+.echipaonoff-listaasteptare-empty {
+  font-style: italic;
+  color: #888;
+  text-align: center;
+  width: 100%;
+}
+
+/* Accepta echipa */
+.echipaonoff-acceptaechipa {
+  background: #DCEEFF;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  padding: 15px 12px 16px 12px;
+}
+.echipaonoff-acceptaechipa-titlu {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #2483C8;
+  text-align: center;
+}
+.echipaonoff-acceptaechipa-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.echipaonoff-acceptaechipa-label {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 12px;
+}
+.echipaonoff-acceptaechipa-butoane {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+.echipaonoff-btn-confirm {
+  padding: 10px 22px;
+  background-color: #62A930;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+  order: 1;
+}
+.echipaonoff-btn-refuza {
+  padding: 10px 22px;
+  background-color: #F46B6B;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: auto;
+  order: 2;
+}
+.echipaonoff-btn-confirm:hover {
+  background-color: #2483C8;
+  color: black;
+}
+.echipaonoff-btn-refuza:hover {
+  background-color: #FFD600;
+  color: black;
+}
+
+/* Verificare echipa */
+.echipaonoff-verificareechipa {
+  background: #FFF6E0;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  padding: 15px 12px 16px 12px;
+}
+.echipaonoff-verificareechipa-titlu {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #2483C8;
+  text-align: center;
+}
+.echipaonoff-verificareechipa-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.echipaonoff-verificareechipa-label {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* Inchidere echipa */
+.echipaonoff-inchidereechipa {
+  background: #F6CACA;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  padding: 15px 12px 16px 12px;
+}
+.echipaonoff-inchidereechipa-titlu {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #2483C8;
+  text-align: center;
+}
+.echipaonoff-inchidereechipa-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.echipaonoff-inchidereechipa-label {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 12px;
+}
+.echipaonoff-inchidereechipa-butoane {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+.echipaonoff-btn-inchide {
+  padding: 10px 22px;
+  background-color: #62A930;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.echipaonoff-btn-inchide:hover {
+  background-color: #FFD600;
+  color: black;
+}
+
+/* Inputs */
+.echipaonoff-input {
+  flex: 1;
+  padding: 7px 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.echipaonoff-acceptaechipa-label span,
+.echipaonoff-acceptaechipa-label,
+.echipaonoff-verificareechipa-label span,
+.echipaonoff-verificareechipa-label,
+.echipaonoff-inchidereechipa-label span,
+.echipaonoff-inchidereechipa-label {
+  font-size: 14px !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .echipaonoff-listaasteptare-grid, .echipaonoff-acceptaechipa-grid,
+  .echipaonoff-verificareechipa-grid, .echipaonoff-inchidereechipa-grid {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .echipaonoff-coloana {
+    margin-bottom: 10px;
+  }
+}

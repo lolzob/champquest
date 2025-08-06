@@ -238,12 +238,11 @@
   "mesaj_jucatori": "Mesaj de la utilizatori",
   "mesaj_admini": "Mesaj de la admini",
   "lista_transferuri": "Lista transferuri",
-  "aproba_echipa": "Aprobă echipă",
+  "echipa_on_of": "Echipa on/off",
   "avertizare": "Avertizare",
   "amenda": "Amendă",
-  "inchidere_admin": "Închide acces admin",
-  "inchidere_echipa": "Închide echipă",
-  "scoatere_amenda": "Șterge amendă",
+  "inchidere_admin": "Admin on/off",
+  "sterge_amenda": "Șterge amendă",
   "mesaje_utilizatori": "Mesaje de la utilizatori",
   "mesaje_admini": "Mesaje de la admini",
   "mesaj_utilizator": "Mesaj utilizator",
@@ -307,5 +306,55 @@
     "mesaj": "Mesaj ștergere",
     "prefix": "Solicitare ștergere: "
   }
+},
+"panouadmin": {
+  "titlu": "Panoul Admin ON/OFF",
+  "id": "Id user",
+  "nume": "Nume user",
+  "tip": "Tip admin",
+  "confirmare": "Confirmare",
+  "trimite": "Trimite",
+
+  "numire": {
+    "titlu": "Numire Admin",
+    "incomplet": "Completează datele pentru numire admin.",
+    "mesaj": "Ai selectat ca {{nume}} să fie {{tip}} pentru Champ Quest. Dacă ești sigur de acest lucru, apasă butonul trimite."
+  },
+
+  "renuntare": {
+    "titlu": "Renunțare Admin",
+    "incomplet": "Completează datele pentru renunțare admin.",
+    "mesaj": "Ai selectat ca {{nume}} să nu mai fie {{tip}} pentru Champ Quest. Dacă ești sigur de acest lucru, apasă butonul trimite."
+  }
+},
+"echipaonoff": {
+  "adminTitlu": "Panoul Admin ON/OFF",
+
+  "listaTitlu": "Lista de așteptare",
+  "nuEchipe": "Nu sunt echipe în așteptare",
+
+  "acceptaTitlu": "Acceptă echipa",
+  "numeUser": "Nume user",
+  "email": "Email",
+  "numeEchipa": "Nume echipă",
+  "ziua": "Ziua înregistrării",
+  "accepta": "Acceptă",
+  "refuza": "Refuză",
+
+  "verificareTitlu": "Verificare echipă",
+  "ipUser": "IP user",
+  "ipTaraOras": "IP Țara (Oraș)",
+  "ipISP": "IP ISP",
+  "proxy": "Proxy",
+  "vpn": "VPN",
+  "noProxy": "fără proxy",
+  "noVPN": "fără VPN",
+  "cookies": "Cookies",
+  "duplicat": "duplicat",
+
+  "inchidereTitlu": "Închidere echipă",
+  "idEchipa": "ID echipă",
+  "idUser": "ID user",
+  "inchide": "Închide"
 }
 }

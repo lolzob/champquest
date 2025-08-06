@@ -41,6 +41,8 @@ import AdmMesaj from './admin/AdmMesaj';
 import CQ from './admin/CQ';
 import CqMesaj from './admin/CqMesaj';
 import Sanctiuni from './admin/Sanctiuni';
+import PanouAdmin from './admin/PanouAdmin';
+import EchipaOnOff from './admin/EchipaOnOff';
 
 const EchipaMea = () => {
   const navigate = useNavigate();
@@ -181,6 +183,8 @@ const EchipaMea = () => {
             <Route path="/admin/cq" element={<CQ />} />
             <Route path="/admin/cqmesaj" element={<CqMesaj />} />
             <Route path="/admin/sanctiuni" element={<Sanctiuni />} />
+            <Route path="/admin/panouadmin" element={<PanouAdmin />} />
+            <Route path="/admin/echipaonoff" element={<EchipaOnOff />} />
             <Route
               path="*"
               element={

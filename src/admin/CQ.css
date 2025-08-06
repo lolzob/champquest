@@ -11,7 +11,7 @@
   color: #fff;
   padding: 8px 14px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 21px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
@@ -74,7 +74,7 @@
 .cq-bg-mov      { background-color: #E5E6FA; }
 .cq-bg-rosu     { background-color: #F6CACA; }
 .cq-bg-crem     { background-color: #FFE4B5; }
-.cq-bg-bej     { background-color: #F3E7D8; }
+.cq-bg-bej      { background-color: #F3E7D8; }
 .cq-bg-gri      { background-color: #E0E0E0; }
 
 /* === Pentru pătratul centrat === */
