@@ -62,7 +62,7 @@ function CqMesaj() {
 
   return (
     <>
-      <h2 className="titlu-cqmesaj">{t('cq.panou') || 'Panou CQ'} (XX)</h2>
+      <h2 className="titlu-cqmesaj">{t('cqmesaj.panou')} (XX)</h2>
 
       <div className="container-mesaje-cqmesaj">
         <div className="lista-user-cqmesaj">

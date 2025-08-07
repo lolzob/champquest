@@ -43,7 +43,7 @@ function ModMesaj() {
 
   return (
     <>
-      <h2 className="titlu-modmesaj">{t('mod.panou')} (XX)</h2>
+      <h2 className="titlu-modmesaj">{t('mod.panou_mesaje')} (XX)</h2>
 
       {/* Liste cu mesaje */}
       <div className="container-mesaje-modmesaj">

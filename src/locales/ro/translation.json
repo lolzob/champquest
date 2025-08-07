@@ -178,6 +178,7 @@
 },
   "tra": {
   "sectiune": "Panoul TRA",
+  "panou_mesaje": "Panoul TRA Mesaje",
   "mesaje_verificare": "Mesaje în verificare",
   "mesaje_asteptare": "Mesaje în așteptare",
   "mesaj_utilizator": "Mesaj de la utilizator",
@@ -198,6 +199,7 @@
 },
   "mod": {
   "panou": "Panoul MOD",
+  "panou_mesaje": "Panoul MOD Mesaje",
   "mesaje_verificare": "Mesaje în verificare",
   "mesaje_asteptare": "Mesaje în așteptare",
   "mesaj_utilizator": "Mesaj de la utilizator",
@@ -213,6 +215,7 @@
 }, 
   "adm": {
     "panou": "Panoul ADM",
+    "panou_mesaje": "Panoul ADM Mesaje",
     "mesaje_verificare": "Mesaje în verificare",
     "mesaje_asteptare": "Mesaje în așteptare",
     "mesaj_utilizator": "Mesaj utilizator",
@@ -255,6 +258,9 @@
   "placeholder_raspuns_admin": "Scrie răspuns pentru admin ...",
   "placeholder_sistem": "Scrie mesaj sistem ...",
   "niciun_mesaj": "Niciun mesaj selectat"
+},
+  "cqmesaj": {
+  "panou": "Panoul CQ Mesaje"
 },
   "sanctiuni": {
   "titlu": "Sancțiuni",
@@ -328,7 +334,7 @@
   }
 },
 "echipaonoff": {
-  "adminTitlu": "Panoul Admin ON/OFF",
+  "adminTitlu": "Panoul Echipa ON/OFF",
 
   "listaTitlu": "Lista de așteptare",
   "nuEchipe": "Nu sunt echipe în așteptare",
@@ -343,8 +349,8 @@
 
   "verificareTitlu": "Verificare echipă",
   "ipUser": "IP user",
-  "ipTaraOras": "IP Țara (Oraș)",
-  "ipISP": "IP ISP",
+  "ipTaraOras": "Țara (Oraș)",
+  "ipISP": "ISP",
   "proxy": "Proxy",
   "vpn": "VPN",
   "noProxy": "fără proxy",
@@ -356,5 +362,16 @@
   "idEchipa": "ID echipă",
   "idUser": "ID user",
   "inchide": "Închide"
-}
+},
+  "transfer": {
+    "panel_title": "Panoul transfer",
+    "player": "Jucător transferat",
+    "final_price": "Preț final",
+    "initial_price": "Preț inițial",
+    "bids": "Nr. licitații",
+    "date": "Data",
+    "time": "Ora",
+    "details": "Detaliile transferului",
+    "details_button": "Detalii"
+  }
 }

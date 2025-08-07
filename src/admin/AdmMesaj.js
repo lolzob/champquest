@@ -61,7 +61,7 @@ function AdmMesaj() {
 
   return (
     <>
-      <h2 className="titlu-admmesaj">{t('adm.panou') || 'Panou ADM'} (XX)</h2>
+      <h2 className="titlu-admmesaj">{t('adm.panou_mesaje')} (XX)</h2>
 
       <div className="container-mesaje-admmesaj">
         <div className="lista-verificare-admmesaj">

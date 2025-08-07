@@ -15,7 +15,7 @@ function AdminPanel() {
   } catch {}
 
   const isCQ = user.email === 'lolzob';
-  const rol = user.rol || '';
+  const rol = (user.rol || '').toUpperCase(); // ✅ aici corectăm
 
   return (
     <div className="pagina-admin">

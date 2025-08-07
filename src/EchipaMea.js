@@ -43,6 +43,7 @@ import CqMesaj from './admin/CqMesaj';
 import Sanctiuni from './admin/Sanctiuni';
 import PanouAdmin from './admin/PanouAdmin';
 import EchipaOnOff from './admin/EchipaOnOff';
+import PanouTransferuri from './admin/PanouTransferuri';
 
 const EchipaMea = () => {
   const navigate = useNavigate();
@@ -124,7 +125,7 @@ const EchipaMea = () => {
           <button className="nav-button">{t('echipa.global')}</button>
           <button className="nav-button">{t('echipa.forum')}</button>
           <button className="nav-button">{t('echipa.ajutor')}</button>
-          {user.admin && (
+          {['tra', 'mod', 'adm', 'cq'].includes(user.rol) && (
             <button
               className="nav-button admin-button"
               onClick={() => navigate('/echipa/admin')}
@@ -185,6 +186,7 @@ const EchipaMea = () => {
             <Route path="/admin/sanctiuni" element={<Sanctiuni />} />
             <Route path="/admin/panouadmin" element={<PanouAdmin />} />
             <Route path="/admin/echipaonoff" element={<EchipaOnOff />} />
+            <Route path="/admin/panoutransferuri" element={<PanouTransferuri />} />
             <Route
               path="*"
               element={

@@ -28,22 +28,27 @@ function formatZiua(ziua) {
 export default function EchipaOnOff() {
   const { t } = useTranslation();
 
+  // ✅ Detectare rol
+  let user = {};
+  try {
+    const raw = localStorage.getItem('user');
+    user = JSON.parse(raw);
+  } catch {}
+  const isCQ = user.rol === 'cq';
+
   const [echipaSelectata, setEchipaSelectata] = useState(null);
   const [idInchidere, setIdInchidere] = useState('');
   const [userInchidere, setUserInchidere] = useState('');
   const [numeEchipaInchidere, setNumeEchipaInchidere] = useState('');
   const [numeUserInchidere, setNumeUserInchidere] = useState('');
 
-  // Handle team selection from waiting list
   const selectEchipa = echipa => {
     setEchipaSelectata(echipa);
   };
 
-  // Handle manual team id for closing
   const handleIdInchidereChange = e => {
     const idEchipa = e.target.value;
     setIdInchidere(idEchipa);
-    // Fill fields if found in data
     const echipa = echipeAsteptare.find(e => e.id === idEchipa);
     if (echipa) {
       setUserInchidere(echipa.user);
@@ -58,9 +63,9 @@ export default function EchipaOnOff() {
 
   return (
     <div className="echipaonoff-pagina">
-      {/* Panoul admin on/off */}
+      {/* Titlu */}
       <div className="echipaonoff-titlu">{t('echipaonoff.adminTitlu', 'Panoul Admin ON/OFF')}</div>
-      
+
       {/* Lista de asteptare */}
       <div className="echipaonoff-listaasteptare">
         <div className="echipaonoff-listaasteptare-titlu">{t('echipaonoff.listaTitlu', 'Lista de asteptare')}</div>
@@ -122,41 +127,29 @@ export default function EchipaOnOff() {
         <div className="echipaonoff-verificareechipa-grid">
           <div className="echipaonoff-verificareechipa-label">
             {t('echipaonoff.ipUser', 'IP user')}:
-            <input className="echipaonoff-input" type="text" value={
-              echipaSelectata ? `${echipaSelectata.ip}` : ''
-            } readOnly />
+            <input className="echipaonoff-input" type="text" value={echipaSelectata?.ip || ''} readOnly />
           </div>
           <div className="echipaonoff-verificareechipa-label">
             {t('echipaonoff.ipTaraOras', 'IP Țara (Oraș)')}:
-            <input className="echipaonoff-input" type="text" value={
-              echipaSelectata ? `${echipaSelectata.tara} (${echipaSelectata.oras})` : ''
-            } readOnly />
+            <input className="echipaonoff-input" type="text" value={echipaSelectata ? `${echipaSelectata.tara} (${echipaSelectata.oras})` : ''} readOnly />
           </div>
           <div className="echipaonoff-verificareechipa-label">
             {t('echipaonoff.ipISP', 'IP ISP')}:
-            <input className="echipaonoff-input" type="text" value={
-              echipaSelectata ? `${echipaSelectata.isp} (${echipaSelectata.ispType})` : ''
-            } readOnly />
+            <input className="echipaonoff-input" type="text" value={echipaSelectata ? `${echipaSelectata.isp} (${echipaSelectata.ispType})` : ''} readOnly />
           </div>
           <div className="echipaonoff-verificareechipa-label">
             {t('echipaonoff.proxy', 'Proxy')}:
-            <input className="echipaonoff-input" type="text" value={
-              echipaSelectata ? (echipaSelectata.proxy ? echipaSelectata.proxy : t('echipaonoff.noProxy', 'no proxy')) : ''
-            } readOnly />
+            <input className="echipaonoff-input" type="text" value={echipaSelectata ? (echipaSelectata.proxy || t('echipaonoff.noProxy', 'no proxy')) : ''} readOnly />
           </div>
           <div className="echipaonoff-verificareechipa-label">
             {t('echipaonoff.vpn', 'VPN')}:
-            <input className="echipaonoff-input" type="text" value={
-              echipaSelectata ? (echipaSelectata.vpn ? echipaSelectata.vpn : t('echipaonoff.noVPN', 'no vpn')) : ''
-            } readOnly />
+            <input className="echipaonoff-input" type="text" value={echipaSelectata ? (echipaSelectata.vpn || t('echipaonoff.noVPN', 'no vpn')) : ''} readOnly />
           </div>
           <div className="echipaonoff-verificareechipa-label">
             {t('echipaonoff.cookies', 'Cookies')}:
             <input
               className="echipaonoff-input"
-              style={echipaSelectata
-                ? { color: echipaSelectata.cookieUnique ? 'green' : 'red', fontWeight: 'bold' }
-                : {}}
+              style={echipaSelectata ? { color: echipaSelectata.cookieUnique ? 'green' : 'red', fontWeight: 'bold' } : {}}
               type="text"
               value={
                 echipaSelectata
@@ -171,29 +164,31 @@ export default function EchipaOnOff() {
         </div>
       </div>
 
-      {/* Inchidere echipa */}
-      <div className="echipaonoff-inchidereechipa">
-        <div className="echipaonoff-inchidereechipa-titlu">{t('echipaonoff.inchidereTitlu', 'Închidere echipă')}</div>
-        <div className="echipaonoff-inchidereechipa-grid">
-          <div className="echipaonoff-inchidereechipa-label">
-            {t('echipaonoff.idEchipa', 'ID echipă')}:
-            <input className="echipaonoff-input" type="text" value={idInchidere} onChange={handleIdInchidereChange} />
-            {t('echipaonoff.idUser', 'ID user')}:
-            <input className="echipaonoff-input" type="text" value={userInchidere} readOnly />
-          </div>
-          <div className="echipaonoff-inchidereechipa-label">
-            {t('echipaonoff.numeEchipa', 'Nume echipă')}:
-            <input className="echipaonoff-input" type="text" value={numeEchipaInchidere} readOnly />
-            {t('echipaonoff.numeUser', 'Nume user')}:
-            <input className="echipaonoff-input" type="text" value={numeUserInchidere} readOnly />
-          </div>
-          <div className="echipaonoff-inchidereechipa-butoane">
-            <button className="echipaonoff-btn-inchide" disabled={!idInchidere}>
-              {t('echipaonoff.inchide', 'Închide')}
-            </button>
+      {/* Închidere echipă – doar CQ */}
+      {isCQ && (
+        <div className="echipaonoff-inchidereechipa">
+          <div className="echipaonoff-inchidereechipa-titlu">{t('echipaonoff.inchidereTitlu', 'Închidere echipă')}</div>
+          <div className="echipaonoff-inchidereechipa-grid">
+            <div className="echipaonoff-inchidereechipa-label">
+              {t('echipaonoff.idEchipa', 'ID echipă')}:
+              <input className="echipaonoff-input" type="text" value={idInchidere} onChange={handleIdInchidereChange} />
+              {t('echipaonoff.idUser', 'ID user')}:
+              <input className="echipaonoff-input" type="text" value={userInchidere} readOnly />
+            </div>
+            <div className="echipaonoff-inchidereechipa-label">
+              {t('echipaonoff.numeEchipa', 'Nume echipă')}:
+              <input className="echipaonoff-input" type="text" value={numeEchipaInchidere} readOnly />
+              {t('echipaonoff.numeUser', 'Nume user')}:
+              <input className="echipaonoff-input" type="text" value={numeUserInchidere} readOnly />
+            </div>
+            <div className="echipaonoff-inchidereechipa-butoane">
+              <button className="echipaonoff-btn-inchide" disabled={!idInchidere}>
+                {t('echipaonoff.inchide', 'Închide')}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

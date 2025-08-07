@@ -8,8 +8,6 @@ const jucatori = [
   { id: '103', nume: 'Vasile Gheorghe' },
 ];
 
-const role = 'CQ';
-
 // === Config tipuri avertismente ===
 const tipuriAvertizare = [
   { tip: 1, descriereKey: 'sanctiuni.avertizare.tip1', textKey: 'sanctiuni.avertizare.text1' },
@@ -32,6 +30,13 @@ const tipuriAmenda = [
 
 export default function Sanctiuni() {
   const { t } = useTranslation();
+
+  let role = '';
+  try {
+    const raw = localStorage.getItem('user');
+    const user = JSON.parse(raw);
+    role = (user?.rol || '').toUpperCase();
+  } catch {}
 
   // === AVERTISARE ===
   const [idAvertizare, setIdAvertizare] = useState('');
@@ -90,10 +95,10 @@ export default function Sanctiuni() {
     // eslint-disable-next-line
   }, []);
 
-  const renderListaTipuri = (lista, prefix) => (
+  const renderListaTipuri = (lista) => (
     <div className="sanctiuni-tipuri-grid">
       <div>
-        {lista.slice(0,3).map(tip => (
+        {lista.slice(0, 3).map(tip => (
           <div key={tip.tip}><strong>Tip {tip.tip}:</strong> {t(tip.descriereKey)}</div>
         ))}
       </div>
@@ -109,9 +114,9 @@ export default function Sanctiuni() {
     <div className="sanctiuni-pagina">
       <h2 className="titlu-sanctiuni">{t('sanctiuni.titlu')}</h2>
 
-      {(role === 'MOD' || role === 'ADM' || role === 'CQ') && (
+      {(role === 'ADM' || role === 'CQ') && (
         <>
-          {/* Avertizare */}
+          {/* Avertisment */}
           <div className="sanctiuni-row">
             <div className="sanctiuni-card sanctiuni-card-bg-avertizare">
               <div className="sanctiuni-card-title">{t('sanctiuni.avertizare.title')}</div>
@@ -147,11 +152,7 @@ export default function Sanctiuni() {
             <div className="sanctiuni-list-title">{t('sanctiuni.avertizare.lista')}</div>
             {renderListaTipuri(tipuriAvertizare)}
           </div>
-        </>
-      )}
 
-      {(role === 'ADM' || role === 'CQ') && (
-        <>
           {/* Amendă */}
           <div className="sanctiuni-row">
             <div className="sanctiuni-card sanctiuni-card-bg-amenda">
@@ -191,9 +192,9 @@ export default function Sanctiuni() {
         </>
       )}
 
+      {/* Ștergere amendă doar pentru CQ */}
       {role === 'CQ' && (
         <>
-          {/* Ștergere amendă */}
           <div className="sanctiuni-row">
             <div className="sanctiuni-card sanctiuni-card-bg-stergere">
               <div className="sanctiuni-card-title">{t('sanctiuni.stergere.title')}</div>

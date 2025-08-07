@@ -178,6 +178,7 @@
 },
   "tra": {
   "panou": "TRA Panel",
+  "panou_mesaje": "TRA Message Panel",
   "mesaje_verificare": "Messages under review",
   "mesaje_asteptare": "Pending messages",
   "mesaj_utilizator": "Message from user",
@@ -198,6 +199,7 @@
 },
   "mod": {
   "panou": "MOD Panel",
+  "panou_mesaje": "MOD Message Panel",
   "mesaje_verificare": "Messages under review",
   "mesaje_asteptare": "Pending messages",
   "mesaj_utilizator": "Message from user",
@@ -213,6 +215,7 @@
 },
   "adm": {
     "panou": "ADM Panel",
+    "panou_mesaje": "ADM Message Panel",
     "mesaje_verificare": "Messages under review",
     "mesaje_asteptare": "Pending messages",
     "mesaj_utilizator": "User message",
@@ -256,7 +259,10 @@
     "placeholder_sistem": "Write system message ...",
     "niciun_mesaj": "No message selected"
   },
-"sanctiuni": {
+  "cqmesaj": {
+  "panou": "CQ Message Panel"
+},
+  "sanctiuni": {
   "titlu": "Sanctions",
   "confirmare": "Submit sanction",
   "idjucator": "Player ID",
@@ -328,7 +334,7 @@
   }
 },
 "echipaonoff": {
-  "adminTitlu": "Admin Panel ON/OFF",
+  "adminTitlu": "Team ON/OFF Panel",
 
   "listaTitlu": "Waiting List",
   "nuEchipe": "No teams in the waiting list",
@@ -343,8 +349,8 @@
 
   "verificareTitlu": "Team Verification",
   "ipUser": "User IP",
-  "ipTaraOras": "IP Country (City)",
-  "ipISP": "IP ISP",
+  "ipTaraOras": "Country (City)",
+  "ipISP": "ISP",
   "proxy": "Proxy",
   "vpn": "VPN",
   "noProxy": "no proxy",

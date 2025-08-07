@@ -18,7 +18,7 @@ function TRA() {
   } catch {}
 
   const isCQ = user.email === 'lolzob';
-  const isTRA = ['TRA', 'MOD', 'ADM'].includes(user.rol);
+  const isTRA = ['tra', 'mod', 'adm'].includes(user.rol);
   if (!isTRA && !isCQ) {
     navigate('/');
     return null;

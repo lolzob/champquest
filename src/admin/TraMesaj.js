@@ -43,7 +43,7 @@ function TraMesaj() {
 
   return (
     <>
-      <h2 className="titlu-tramesaj">{t('tra.panou')} (XX)</h2>
+      <h2 className="titlu-tramesaj">{t('tra.panou_mesaje')} (XX)</h2>
 
       {/* Liste cu mesaje */}
       <div className="container-mesaje-tramesaj">

@@ -30,7 +30,12 @@ function CQ() {
 
         {/* Rând 2 */}
         <div className="cq-rand">
-          <div className="cq-patrat cq-mic cq-bg-verde">{t('cq.lista_transferuri')}</div>
+          <div 
+            className="cq-patrat cq-mic cq-bg-verde"
+            onClick={() => navigate('/echipa/admin/panoutransferuri')}
+            >
+            {t('cq.lista_transferuri')}
+          </div>
           <div
             className="cq-patrat cq-mic cq-bg-bej"
             onClick={() => navigate('/echipa/admin/echipaonoff')}

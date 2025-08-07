@@ -28,10 +28,10 @@ function Autentificare() {
       const emailTrim = user.trim().toLowerCase();
       let rol = '';
 
-      if (emailTrim === 'lolzob') rol = 'cq'; // Admin principal
-      else if (emailTrim === 'traducator') rol = 'tra';
-      else if (emailTrim === 'moderator') rol = 'mod';
-      else if (emailTrim === 'adminsecundar') rol = 'adm';
+      if (emailTrim === 'lolzob') rol = 'cq'; // Administrator
+      else if (emailTrim === 'je') rol = 'tra';
+      else if (emailTrim === 'me') rol = 'mod';
+      else if (emailTrim === 'ich') rol = 'adm';
       // Altfel, rol gol sau user normal
 
       // ✅ Salvăm userul în localStorage

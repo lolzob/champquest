@@ -86,8 +86,6 @@ function App() {
         <Route path="/confirmare-email" element={<ConfirmareEmail />} />
         <Route path="/despre" element={<DespreChampQuest />} />
         <Route path="/regulament" element={<Regulament />} />
-
-        {/* ✅ Aici am modificat pentru a permite subrutele din EchipaMea */}
         <Route path="/echipa/*" element={<EchipaMea />} />
       </Routes>
 

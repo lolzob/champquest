@@ -43,19 +43,27 @@ function ADM() {
         </div>
 
         <div className="rand-patrate-adm">
-          <div className="patrat-adm mic-adm patrat-lista-transferuri" tabIndex={0}>
+          <div className="patrat-adm mic-adm patrat-lista-transferuri" tabIndex={0}
+	          onClick={() => navigate('/echipa/admin/panoutransferuri')}
+	          >
             {t('adm.lista_transferuri')}
           </div>
-          <div className="patrat-adm mic-adm patrat-aprobare-echipa" tabIndex={0}>
+          <div className="patrat-adm mic-adm patrat-aprobare-echipa" tabIndex={0}
+	          onClick={() => navigate('/echipa/admin/echipaonoff')}
+	          >
             {t('adm.aprobare_echipa')}
           </div>
         </div>
 
         <div className="rand-patrate-adm">
-          <div className="patrat-adm mic-adm patrat-avertizare" tabIndex={0}>
+          <div className="patrat-adm mic-adm patrat-avertizare" tabIndex={0}
+	          onClick={() => navigate('/echipa/admin/sanctiuni')}
+	          >
             {t('adm.avertizare')}
           </div>
-          <div className="patrat-adm mic-adm patrat-amenda" tabIndex={0}>
+          <div className="patrat-adm mic-adm patrat-amenda" tabIndex={0}
+	          onClick={() => navigate('/echipa/admin/sanctiuni')}
+	          >
             {t('adm.amenda')}
           </div>
         </div>
