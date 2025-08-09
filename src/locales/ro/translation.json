@@ -11,7 +11,9 @@
     "login_title": "Autentificare",
     "email": "Email",
     "parola": "Parolă",
-    "buton_login": "Intră în cont"
+    "buton_login": "Intră în cont",
+    "eroare_email": "Email incorrect",
+    "eroare_parola": "Parolă incorectă."
   },
   "inscriere": {
     "titlu": "Ia-ți echipa!",
@@ -273,6 +275,7 @@
     "placeholder": "Scrie avertismentul aici...",
     "mesaj": "Mesaj avertisment",
     "lista": "Lista avertismentelor",
+    "tip":  "Tip avertizare",
     "text1": "Avertisment pentru limbaj ofensator / spam / trolling.",
     "text2": "Avertisment pentru publicare conținut neadecvat.",
     "text3": "Avertisment pentru refuz aplicare sancțiune / contestare abuzivă.",
@@ -286,12 +289,12 @@
     "tip5": "Înțelegeri frauduloase între manageri (match-fixing).",
     "tip6": "Multi-account / folosire conturi multiple."
   },
-
   "amenda": {
     "title": "Amendă",
     "placeholder": "Scrie amenda aici...",
     "mesaj": "Mesaj amendă",
     "lista": "Lista amenzilor",
+    "tip":  "Tip amenda",
     "text1": "Amenda pentru limbaj ofensator / spam / trolling: 3000 cqcoin.",
     "text2": "Amenda pentru refuz aplicare sancțiune / contestare abuzivă: 4000 cqcoin.",
     "text3": "Amenda pentru comportament abuziv față de alți useri: 6000 cqcoin.",
@@ -308,7 +311,8 @@
 
   "stergere": {
     "title": "Ștergere amendă",
-    "placeholder": "Scrie motivul ștergerii...",
+    "placeholder": "Scrie motivul ștergerii ...",
+    "tip":  "Tip amenda",
     "mesaj": "Mesaj ștergere",
     "prefix": "Solicitare ștergere: "
   }

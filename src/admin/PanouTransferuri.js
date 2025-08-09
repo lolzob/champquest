@@ -72,7 +72,7 @@ function PanouTransferuri() {
                 <td>
                   <button
                     className="panou-transferuri-details-button"
-                    onClick={() => navigate(`/detalii-transfer/${transfer.id}`)}
+                    onClick={() => navigate(`/echipa/admin/detaliitransfer/${transfer.id}`)}
                   >
                     {t('transfer.details_button')}
                   </button>

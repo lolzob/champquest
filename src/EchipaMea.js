@@ -44,6 +44,7 @@ import Sanctiuni from './admin/Sanctiuni';
 import PanouAdmin from './admin/PanouAdmin';
 import EchipaOnOff from './admin/EchipaOnOff';
 import PanouTransferuri from './admin/PanouTransferuri';
+import DetaliiTransfer from './admin/DetaliiTransfer';
 
 const EchipaMea = () => {
   const navigate = useNavigate();
@@ -187,6 +188,7 @@ const EchipaMea = () => {
             <Route path="/admin/panouadmin" element={<PanouAdmin />} />
             <Route path="/admin/echipaonoff" element={<EchipaOnOff />} />
             <Route path="/admin/panoutransferuri" element={<PanouTransferuri />} />
+            <Route path="/admin/detaliitransfer/:id" element={<DetaliiTransfer />} />
             <Route
               path="*"
               element={

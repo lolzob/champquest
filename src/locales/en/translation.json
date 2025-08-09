@@ -11,7 +11,9 @@
     "login_title": "Login",
     "email": "Email",
     "parola": "Password",
-    "buton_login": "Log In"
+    "buton_login": "Log In",
+    "eroare_email": "Incorrect email.",
+    "eroare_parola": "Incorrect password."
   },
   "inscriere": {
     "titlu": "Get your team!",
@@ -273,6 +275,7 @@
     "placeholder": "Write the warning here...",
     "mesaj": "Warning message",
     "lista": "List of warnings",
+    "tip": "Warning Type",
     "text1": "Warning for offensive language / spam / trolling.",
     "text2": "Warning for publishing inappropriate content.",
     "text3": "Warning for refusal to comply / abusive contestation.",
@@ -286,12 +289,12 @@
     "tip5": "Fraudulent agreements between managers (match-fixing).",
     "tip6": "Multi-account / using multiple accounts."
   },
-
   "amenda": {
     "title": "Fine",
     "placeholder": "Write the fine here...",
     "mesaj": "Fine message",
     "lista": "List of fines",
+    "tip": "Fine Type",
     "text1": "Fine for offensive language / spam / trolling: 3000 cqcoin.",
     "text2": "Fine for refusal to comply / abusive contestation: 4000 cqcoin.",
     "text3": "Fine for abusive behavior towards other users: 6000 cqcoin.",
@@ -305,10 +308,10 @@
     "tip5": "Multi-account / using multiple accounts.",
     "tip6": "Fraud attempt / exploiting bugs / hacking."
   },
-
   "stergere": {
     "title": "Fine removal",
-    "placeholder": "Write the reason for removal...",
+    "placeholder": "Write the reason for removal ...",
+    "tip": "Fine Type",
     "mesaj": "Removal message",
     "prefix": "Request to remove: "
   }
