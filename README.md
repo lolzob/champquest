@@ -14,7 +14,7 @@ npm run dev
 
 Aplicația va fi disponibilă în browser la:
 
-http://localhost:5173
+http://localhost:6390
 
 Pagina se va reîncărca automat când faci modificări în cod.
 
