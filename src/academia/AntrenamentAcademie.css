@@ -1,0 +1,25 @@
+.pagina-antrenament-academie {
+  padding: 1.5rem 2rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.pagina-antrenament-academie h2 {
+  color: #2483C8;
+  margin-bottom: 1rem;
+}
+
+.lista-antrenamente {
+  list-style: disc inside;
+  padding-left: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lista-antrenamente li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}

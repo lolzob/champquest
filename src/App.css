@@ -1,0 +1,232 @@
+/* === Resetare de bază === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #EBEEEA;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* === Structura generală === */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === HEADER === */
+.app-header {
+  background-color: #EAEEEA;
+  padding: 0px 12px 0px 12px;
+  margin-top: -45px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+
+.header-logo {
+  width: 183px;
+  height: auto;
+  margin-bottom: -45px;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: #2483C8;
+  width: 100%;
+  position: relative; 
+  display: flex;
+  align-items: center;
+  padding: 8px 2rem;
+  height: 50px; 
+}
+
+.nav-group {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+
+.language-button {
+  margin-left: auto;
+  background-color: #62A930;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.language-button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.nav-button {
+  background-color: #62A930; 
+  color: white;
+  border: none;
+  padding: 0.5rem 1.0rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+/* === MAIN === */
+.main-content {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 140px); 
+}
+
+/* === STÂNGA: Imagine și slogan === */
+.left-section {
+  flex: 3;
+  background-color: #EBEEEA; 
+  color: #2483C8;
+  display: flex;
+  flex-direction: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 35px 5px 35px;
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  height: 90%;
+  max-height: 80vh;
+  object-fit: cover; 
+  border: none;
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.slogan {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 500px;
+  font-style: italic;
+  margin-left: auto;
+  margin-right: -66px;
+}
+
+/* === DREAPTA: Formular de autentificare === */
+.right-section {
+  flex: 1;
+  background-color:#EBEEEA ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  background-color: #EBEEEA;
+  border: none;
+  border-radius: 0;
+  padding: 1rem 0;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: -90px;
+  margin-left: auto;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button.green {
+  background-color: #62A930;
+  color: white;
+}
+
+.button.green:hover {
+  background-color: #2483C8;
+}
+
+/* === FOOTER === */
+.app-footer {
+  background-color: #62A930;
+  color: white;
+  padding: 0.3rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* opțional pentru telefon */
+  border-top: 1px solid #62A930;
+}
+
+.social-icons {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon {
+  display: inline-flex;
+  width: 27px;
+  height: 27px;
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.icon:hover {
+  color: #2483C8;
+  transform: scale(1.2);
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}

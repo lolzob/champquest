@@ -1,0 +1,34 @@
+.pagina-amicale-academie {
+  padding: 2rem;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.pagina-amicale-academie h2 {
+  color: #2483C8;
+  margin-bottom: 1rem;
+}
+
+.pagina-amicale-academie p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.lista-amicale {
+  list-style-type: none;
+  padding: 0;
+}
+
+.lista-amicale li {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 0.6rem;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease;
+}
+
+.lista-amicale li:hover {
+  background-color: #eef4fa;
+}

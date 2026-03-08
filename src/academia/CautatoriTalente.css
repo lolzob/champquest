@@ -1,0 +1,24 @@
+.pagina-cautatori-talente {
+  padding: 1.5rem 2rem;
+  background-color: #f7fcf8;
+  min-height: 100vh;
+}
+
+.pagina-cautatori-talente h2 {
+  color: #2483C8;
+  margin-bottom: 1rem;
+}
+
+.lista-talente {
+  list-style: square inside;
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.lista-talente li {
+  margin: 0.5rem 0;
+  color: #444;
+}

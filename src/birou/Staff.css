@@ -1,0 +1,40 @@
+.pagina-staff {
+  background-color: #DCE2DC;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.pagina-staff h2 {
+  margin-bottom: 1rem;
+  color: #2483C8;
+  font-size: 24px;
+}
+
+.pagina-staff h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #62A930;
+  font-size: 18px;
+}
+
+.pagina-staff ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.pagina-staff li::before {
+  content: "\2022";
+  color: #2483C8;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.sectiune-staff {
+  margin-bottom: 1.5rem;
+}

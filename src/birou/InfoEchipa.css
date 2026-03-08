@@ -1,0 +1,22 @@
+.info-echipa {
+  background-color: #DCE2DC;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.info-echipa h2 {
+  margin-bottom: 1rem;
+  color: #2483C8;
+}
+
+.info-echipa ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-echipa li {
+  margin-bottom: 0.5rem;
+}

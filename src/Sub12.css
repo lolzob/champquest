@@ -1,0 +1,16 @@
+.sub12-container {
+    background-color: #fff3f3;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 3rem auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .sub12-container h2 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #c70000;
+  }

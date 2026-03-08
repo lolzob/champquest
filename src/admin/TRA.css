@@ -1,0 +1,133 @@
+/* === Stiluri pagina traducători === */
+.titlu-tra {
+  background-color: #62A930;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 21px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Input pentru cheia de tradus === */
+.camp-input-tra {
+  width: 100%;
+  padding: 8px;
+  margin: 12px 0 21px 0;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* === Container pătrate RO, EN și Mesaje === */
+.container-patrate-tra {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* === Dreptunghiuri === */
+.patrat-rol-tra {
+  flex: 1;
+  background-color: #DFF5E1;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 69px 4px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.patrat-rol-tra:hover {
+  background-color: #FFFACD;
+  color: black;
+  border-color: #2483C8;
+}
+
+/* === Dreptunghiuri Mesaje === */
+.patrat-rol-tra.mesaj-verificare,
+.patrat-rol-tra.mesaj-asteptare {
+  background-color: #DCEEFF;
+}
+
+/* === Pentru cele mici: Mesaje === */
+.mic-tra {
+  padding: 12px 8px;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+/* === Titlu din pătrate (ex: Română, Engleză) === */
+.titlu-patrat-tra {
+  font-size: 13px;
+  margin-bottom: 6px;
+  font-weight: normal;
+  color: #555;
+}
+
+/* === Traducerea efectivă === */
+.patrat-limba-tinta-tra {
+  background-color: #FFFACD;
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* === Textarea === */
+.camp-textarea-tra {
+  width: 100%;
+  height: 90px;
+  resize: none;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+  box-sizing: border-box;
+}
+
+/* === Buton salvare === */
+.buton-salveaza-tra {
+  margin: 21px auto 0 auto;
+  padding: 10px 20px;
+  background-color: #62A930;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+}
+
+.buton-salveaza-tra:hover {
+  background-color: #2483C8;
+  color: black;
+}
+
+/* === JSON generat === */
+.json-output-tra {
+  margin-top: 24px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 1px dashed #aaa;
+  font-family: monospace;
+  white-space: pre-wrap;
+  font-size: 13px;
+}
+
+/* === Culori nr. mesaj === */
+.verde {
+  color: #1b8e38;
+  font-weight: bold;
+}
+
+.rosu {
+  color: #d32f2f;
+  font-weight: bold;
+}

@@ -1,0 +1,91 @@
+/* === Pagina PanouTransferuri === */
+.panou-transferuri-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 0 30px 0;
+}
+
+/* === Titlu Panou Transfer === */
+.panou-transferuri-title {
+  background-color: #62A930;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 21px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  font-weight: bold;
+}
+
+/* === Pătrat tabel transferuri === */
+.panou-transferuri-box {
+  background-color: #FEFACD;
+  padding: 21px;
+  border-radius: 6px;
+  margin: 0 auto;
+  max-width: 1100px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* === Tabel transferuri === */
+.panou-transferuri-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+/* === Header tabel === */
+.panou-transferuri-table thead tr {
+  background-color: #DCEEFF;
+}
+
+.panou-transferuri-table th {
+  font-weight: bold;
+  color: #222;
+  font-size: 14px;
+  /* asigura scris negru si font 14px */
+  padding: 10px 8px;
+  text-align: center;
+}
+
+.panou-transferuri-table td {
+  padding: 10px 8px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* === Rând suspect === */
+.panou-transferuri-row-suspect {
+  background-color: #F6CACA;
+}
+
+/* === Preț final și inițial === */
+.panou-transferuri-final-price {
+  color: #2483C8;
+  font-weight: bold;
+}
+
+.panou-transferuri-initial-price {
+  color: #62A930;
+  font-weight: bold;
+}
+
+/* === Buton detalii transfer === */
+.panou-transferuri-details-button {
+  background-color: #E0E0E0;
+  color: #333;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.panou-transferuri-details-button:hover {
+  background-color: #DFF5E1;
+  color: #333;
+}
