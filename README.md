@@ -8,6 +8,7 @@ Pentru a porni aplicația în modul de dezvoltare:
 
 ```bash
 npm install
+
 npm run dev
 ```
 
